@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript основы для начинающих.</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header header_bcgcolor header_indents">
+			<p class="header__heading header__heading_margin header__heading_decor">Оглавление</p>
+			<nav class="nav-block">
+				<ul id='top_menu' class="menu" >
+					<li id='topItem1' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson3">3 Урок</a>
+						<ul class="menu__submenu">
+							<li id="topItem1LI" class="menu__subitem menu__subitem_background-color menu__subitem_hover">
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter1Lesson3">Глава 1 - Переменные</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter2Lesson3">Глава 2 - Мутирование</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter3Lesson3">Глава 3 - Операторы</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter4Lesson3">Глава 4 - Основные типы данных: примитивы</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter5Lesson3">Глава 5 - Приоритеты операторов</a>
+								</div>																								
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter6Lesson3">Глава 6 - Условные операторы</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter7Lesson3">Глава 7 - Булева логика</a>
+								</div>	
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter8Lesson3">Глава 8 - Понятие о функциях </a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter9Lesson3">Глава 9 - Основное о массивах</a>
+								</div>	
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter10Lesson3">Глава 10 - Основное о циклах</a>
+								</div>	
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter11Lesson3">Глава 11 - Основное о объектах</a>
+								</div>																																					
+							</li>
+						</ul>
+					</li>
+					<li id='topItem2' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson4">4 Урок</a>
+						<ul class="menu__submenu">
+							<li id="topItem2LI" class="menu__subitem menu__subitem_background-color menu__subitem_hover">							
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter1Lesson8">Глава 1 - Некоторые новые возможности синтаксиса</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter2Lesson8">Глава 2 - ---</a>
+								</div>							
+						</ul>
+					</li>
+					<li id='topItem3' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson5">5 Урок</a></li>
+					<li id='topItem4' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson6">6 Урок</a></li>
+					<li id='topItem8' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson7">7 Урок</a>
+					<li id='topItem8' class="menu__item menu__item_hover menu__item_background-color menu__item_padding"><a href="#lesson8">8 Урок</a>
+						<ul class="menu__submenu">
+							<li id="topItem8LI" class="menu__subitem menu__subitem_background-color menu__subitem_hover">							
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter1Lesson8">Глава 1 - Объекты - новые возможности</a>
+								</div>
+								<div class="menu__subitem-block menu__subitem_padding menu__subitem-block_hover">
+									<a href="#Chapter2Lesson8">Глава 2 - Новый синтаксис, деструктуризации объекта</a>
+								</div>							
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<a class="bookmark" name="lesson3"></a> <!-- первый якорь пришлось поставить тут, из-за фиксированного заголовка -->
+		
+		<div class="lessons lessons_padding"><a class="bookmark" name="Chapter1Lesson3"></a>
+			<div class="lesson lesson_oddlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<p class="lesson__heading lesson__heading_margin">Урок 3: Основы.</p>
+				<div class="chapter"><!-- chapter 1 -->
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">1.Переменные</p>
+					<div class="content"><a class="bookmark" name="Chapter2Lesson3"></a>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Объявление переменных</h3>						
+							<span class="code code code_inline-block code_color">var name1 = 'Egor'</span>
+							<span class="wrapper__text wrapper__text_inline-block"><span class="wrapper__text wrapper__text_color-red wrapper__text_bold">//Устаревшая конструкция.</span> <span class="wrapper__text wrapper__text_bold">Лучше использовать 2 последующих</span></span>						 	
+							<span class="code code_color code_block">let name2 = 'Ura'</span>
+							<span class="code code_color code_block">const name3 = 'Ulia'</span>							
+							<h3 class="chapter__header-h3 chapter__header-h3_underline">Пример использования переменных и констант с применением var, let и const</h3>							
+							<span class="code code_color">var name1 = </span>
+							<input type="text" id="txtName1Less3Ch1" class="chapter__input-text" maxlength="25"  placeholder="Введите значение переменной" value="Egor">
+							<!-- button for text output and clear text output -->
+							<input type="button" id="btnName1Less3Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding" value="Присвоить значение">
+							<input type="button" id="btnResetName1Less3Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле name1">
+							<span class="wrapper__text">Теперь </span><span class="code code_color"> name1 = </span>
+							<!-- output text of the result -->
+							<span id="txtOutName1Less3Ch1" class="code code_color"></span>
+							<div class="separator"></div> <!--\\end name1 -->
+							<span class="code code_color">let name2 = </span>
+							<input type="text" id="txtName2Less3Ch1" class="chapter__input-text" maxlength="25"  placeholder="Введите значение переменной" value="Ura">
+							<!-- button for text output and clear text output -->							
+							<input type="button" id="btnName2Less3Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding" value="Присвоить значение">
+							<input type="button" id="btnResetName2Less3Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле name2">							
+							<!-- output text of the result -->							
+							<span class="wrapper__text">Теперь </span><span class="code code_color"> name2 = </span>
+							<span id="txtOutName2Less3Ch1" class="code code_color"></span>
+							<div class="separator"></div><!--\\end name2 -->
+							<span class="code code_color">const name3 = </span>
+							<input type="text" id="txtName3Less3Ch1" class="chapter__input-text" maxlength="25"  placeholder="Введите значение переменной" value="Ulia">
+							<input type="button" id="btnName3Less3Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Присвоить значение">
+							<span class="wrapper__text">Теперь </span> <span class="code code_color">name3 = </span>
+							<span id="txtOutName3Less3Ch1" class="code"></span>						
+						<!--/end name3 -->
+					</div>  <!-- content -->
+				</div><!-- //end chapter 1 lesson 3 -->
+				<div class="chapter"><!-- chapter 2 lesson 3 --><a class="bookmark" name="Chapter3Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">2.Мутирование</p>
+					<div class="content" name=''>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Пример <span class="wrapper__text wrapper__text_bold wrapper__text_i">"мутирования"</span> - когда складываем строку (<span class="wrapper__text wrapper__text_bold">string</span>) с  числом (<span class="wrapper__text wrapper__text_bold">number</span>) и в резудьтате получаем <span class="wrapper__text wrapper__text_bold">string</span></h3>	
+							<span class="wrapper__text">Введите имя:</span>
+							<input type="text" id="txtFirstNameLess3Ch2" class="chapter__input-text chapter__input-text_w90" maxlength="20"  placeholder="Введите имя" value="Egor">
+							<span class="wrapper__text">Введите фамилию:</span>
+							<input type="text" id="txtLastNameLess3Ch2" class="chapter__input-text chapter__input-text_w114" maxlength="20"  placeholder="Введите фамилию" value="Shulga">
+							<span class="wrapper__text">Введите свой возраст:</span>
+							<input type="text" id="txtAgeLess3Ch2" class="chapter__input-text chapter__input-text_w25" maxlength="3"  placeholder="Введите возраст" value="40">
+							<!-- button for text output and clear text output -->									
+							<input type="button" id="btnShowResultLess3Ch2" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_ml" value="Посмотреть результат">
+							<input type="button" id="btnClearResultLess3Ch2" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле 'Результат'">								
+							<div class="separator"></div>
+							<div class="resultat resultat_margin">
+								<span class="wrapper__text">Результат = </span>
+								<!-- output text of the result -->											
+								<span id="txtOutResultLess3Ch2" class="wrapper__text wrapper__text_bold"></span>
+							</div>	 	
+							<div class="resultat resultat_margin">	
+								<span class="wrapper__text">Результат функции <span class="code code_color"> <span class="wrapper__text wrapper__text_bold"> typeof(numLess3Ch2) = </span></span></span>		
+								<span id="txtOutResult2Less3Ch2" class="wrapper__text wrapper__text_bold"></span>	
+							</div>
+							<h3 class="chapter__header-h3 chapter__header-h3_underline">Ниже пример с функцией <span class="wrapper__text wrapper__text_bold">prompt</span></h3>					
+							<div class="separator"></div>
+							<!-- button for text output and clear text output -->																	 		
+							<input type="button" id="btnCallWinPromptLess3Ch2" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Посмотреть результат">
+							<input type="button" id="btnResetCallWinPromptLess3Ch2" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле 'Результат'">							
+							<span class="wrapper__text">Результат функции <span class="wrapper__text wrapper__text_bold">Prompt</span> = </span>
+							<!-- output text of the result -->							
+							<span id="resultCallWinPromptLess3Ch2" class="wrapper__text wrapper__text_bold"></span>									 		
+					</div><!-- content -->
+				</div><!-- //chapter 2 lesson 3 -->			
+				<div class="chapter"><!-- chapter 3 lesson 3 --><a class="bookmark" name="Chapter4Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">3.Операторы</p>
+					<div class="content">
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Пример <span class="wrapper__text wrapper__text_bold">постфиксной</span> записи операторов</h3>						
+							<span class="code code_color">let a = </span>
+							<input type="text" id="txtAPostfixLess3Ch3" class="chapter__input-text chapter__input-text_w45" maxlength="3"  placeholder="число" value="10">
+							<span class="wrapper__text"> далее попробуем</span><span class="code code_color"> a = a++</span>		
+							<!-- button for text output and clear text output -->																	 		
+							<input type="button" id="btnAPostfixLess3Ch3" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_ml" value="Получить результат">
+							<input type="button" id="btnResetFieldAPostfixLess3Ch3" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле a">
+							<div class="separator"></div>
+							<div class="resultat resultat_margin">
+								<span class="wrapper__text"><span class="wrapper__text wrapper__text_bold">Результат:</span> Сначала отработал оператор</span><span class="code code_color"> '='</span><span class="wrapper__text">, поэтому <span class="wrapper__text wrapper__text_bold">a</span> = </span>
+								<!-- output text of the result -->
+								<span id="txtOutAPostfixLess3Ch3" class="wrapper__text"></span>	
+							</div>
+							<span class="wrapper__text">А уже после присваивания, сработал оператор <span class="code code_color">'++'</span>, поэтому теперь <span class="wrapper__text wrapper__text_bold">a</span> = </span>
+							<span id="txtOutA2PostfixLess3Ch3" class="wrapper__text"></span>					
+						<div class="separator"></div>	
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Пример <span class="wrapper__text wrapper__text_bold">префиксной</span> записи операторов</h3>
+						
+							<span class="code code_color">let a = </span>
+							<input type="text" id="txtAPrefixLess3Ch3" class="chapter__input-text chapter__input-text_w45" maxlength="3"  placeholder="число" value="10">
+							<span class="wrapper__text"> далее попробуем</span><span class="code code_color"> a = ++a</span>
+							<!-- button for text output and clear text output -->																	 		
+							<input type="button" id="btnAPrefixLess3Ch3" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Получить результат">
+							<input type="button" id="btnResetFieldAPrefixLess3Ch3" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле a">
+							<span class="wrapper__text"><span class="wrapper__text wrapper__text_bold">Результат:</span> Сначала отработал оператор</span><span class="code code_color"> '++'</span><span class="wrapper__text">, поэтому <span class="wrapper__text wrapper__text_bold">a</span> = </span>							
+							<!-- output text of the result -->
+							<span id="txtOutAPrefixLess3Ch3" class="text"></span>	
+							<div class="separator"></div>	
+							<span class="wrapper__text">А уже потом присваивание, так что значение <span class="wrapper__text wrapper__text_bold">a</span> не поменялось и = </span>
+							<!-- output text of the result -->
+							<span id="txtOutA2PrefixLess3Ch3" class="wrapper__text"></span>
+							<div class="separator"></div>	
+							<span class="wrapper__text">Тоже самое касается и оператора</span><span class="code code_color"> '--'</span><span class="wrapper__text">!</span> 
+						<div class="separator"></div>	
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Пример <span class="wrapper__text wrapper__text_bold">сокращенной</span> записи выражений, типа: <span class="code code_color">a = a + b</span></h3>
+						<span class="wrapper__text">Запись</span><span class="code code_color"> a = а + b</span> <span class="wrapper__text wrapper__text_bold wrapper__text_color-blue">равнозначна записи</span> <span class="code code_color"> a += b</span>
+					</div>				
+				</div><!-- //end chapter 3 lesson 3 -->
+				<div class="chapter"><!-- chapter 4 lesson 3 --><a class="bookmark" name="Chapter5Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">4.Основные типы данных - примитивы</p>
+					<div class="content">
+						<span class="wrapper__text wrapper__text_bold">Логический тип (bool): </span><span class="code code_color">const isProgrammer = true</span>
+						<!-- button for text output and clear text output -->																	 		
+						<input type="button" id="btnExampleBoolLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Посмотреть тип данных">
+						<input type="button" id="btnResetFieldExamplBoolLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<!-- output text of the result -->
+						<span id="txtOutExampleBoolLess3Ch4" class="wrapper__text wrapper__text_bold"></span>	
+						<div class="separator"></div>	
+						<span class="wrapper__text wrapper__text_bold">Строки (string): </span><span class="code code_color">const Name = 'Egor'</span>
+						<!-- button for text output and clear text output -->
+						<input type="button" id="btnExampleStringLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Посмотреть тип данных">
+						<input type="button" id="btnResetFieldExampleStringLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<!-- output text of the result -->
+						<span id="txtOutExampleStringLess3Ch4" class="wrapper__text wrapper__text_bold"></span>	
+						<div class="separator"></div>						
+						<span class="wrapper__text wrapper__text_bold">Числа (number): </span><span class="code code_color">const Age = 40</span>
+						<!-- button for text output and clear text output -->
+						<input type="button" id="btnExampleNumberLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Посмотреть тип данных">
+						<input type="button" id="btnResetFieldExampleNumberLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<!-- output text of the result -->
+						<span id="txtOutExampleNumberLess3Ch4" class="wrapper__text wrapper__text_bold"></span>												
+						<div class="separator"></div>	
+						<span class="wrapper__text wrapper__text_bold">undefined : </span><span class="code code_color">const Un = undefined</span>
+						<!-- button for text output and clear text output -->
+						<input type="button" id="btnExampleUndefinedLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Посмотреть тип данных">
+						<input type="button" id="btnResetFieldExampleUndefinedLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<!-- output text of the result -->
+						<span id="txtOutExampleUndefinedLess3Ch4" class="wrapper__text wrapper__text_bold"></span>											
+						<div class="separator"></div>	
+						<span class="wrapper__text wrapper__text_bold">Null: </span><span class="code code_color">const varNull = null</span>
+						<!-- button for text output and clear text output -->
+						<input type="button" id="btnExampleNullLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Посмотреть тип данных">
+						<input type="button" id="btnResetFieldExampleNullLess3Ch4" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<!-- output text of the result -->
+						<span id="txtOutExampleNullLess3Ch4" class="wrapper__text wrapper__text_bold"></span>												
+						<div class="separator"></div>	
+						<span class="wrapper__text wrapper__text_bold wrapper__text_color-red">Обратите внимание на последний результат:</span> <span class="wrapper__text">Это один из <span class="wrapper__text wrapper__text_bold">'багов'</span> в javascript</span>						 	
+						<div class="separator"></div>	
+						<span class="wrapper__text">В данном случае функция <span class="wrapper__text wrapper__text_bold">typeof</span> некорректно выводит информацию о типе.</span>
+					</div> 
+				</div>
+				<div class="chapter"><!-- chapter 5 lesson 3 --><a name="Chapter5Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">5.Приоритеты операторов</p>
+					<div class="content">
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Рассморим пример в котором нужно понять, что будет выдано в качестве результата</h3>
+						<div class="code code_color">const <span class="wrapper__text wrapper__text_bold">fullAge</span> = 40</div>
+						<div class="code code_color">const <span class="wrapper__text wrapper__text_bold">birthAge</span> = 1980</div>
+						<div class="code code_color">const <span class="wrapper__text wrapper__text_bold">currentYear</span> = 2020</div>
+						<span class="code code_color conten__code_block">let <span class="wrapper__text wrapper__text_bold">isFullAge</span> = <span class="wrapper__text wrapper__text_bold">currentYear</span> - <span class="wrapper__text wrapper__text_bold">birthAge</span> >= <span class="wrapper__text wrapper__text_bold">fullAge</span></span>
+						<div class="separator"></div>
+						<input type="button" id="btnfullAgeLess3Ch5" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Узнать результат">
+						<input type="button" id="btnResetfullAgeLess3Ch5" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<span id="txtOutfullAgeLess3Ch5" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<span class="wrapper__text">Вначале выполнилась арифметическая операция,потом операция сравнения, а затем присваивание.</span>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_bold">У всех операторов есть свое значение приоритетов. Ниже приведена таблица с приоритетами:</div>
+						<div class="table-container">
+							<table class="priority-table">
+								<thead>
+									<tr>
+										<th>Приоритет</th>
+										<th>Тип оператора</th>
+										<th>Ассоциативность</th>
+										<th>Конкретные операторы</th>
+									</tr>									
+								</thead>
+								<tbody>
+									<tr>
+										<td>20</td>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Grouping" rel="nofollow"><code>Группировка</code></a></td>
+										<td>не определено</td>
+										<td><span class="code code_color">( … )</span></td>
+									</tr>
+									<tr>
+										<td rowspan="4">19</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation"><code>Доступ к свойствам</code></a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… . …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation"><code>Доступ к свойствам с возможностью вычисления</code></a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… [ … ]</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> (со списком аргументов)</td>
+										<td>не определено</td>
+										<td><span class="code code_color">new … ( … )</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Guide/Functions">Вызов функции</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… ( <var>… </var>)</span></td>
+									</tr>
+									<tr>
+										<td>18</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> (без списка аргументов)</td>
+										<td>справа налево</td>
+										<td><span class="code code_color">new …</span></td>
+									</tr>	
+									<tr>
+										<td rowspan="2">17</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"><code>Постфиксный инкремент</code></a></td>
+										<td rowspan="2">не определено</td>
+										<td><span class="code code_color">… ++</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"><code>Постфиксный декремент</code></a></td>
+										<td><span class="code code_color">… --</span></td>
+									</tr>
+									<tr>
+										<td rowspan="10">16</td>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT" rel="nofollow">Логическое отрицание</a></td>
+										<td rowspan="10">справа налево</td>
+										<td><span class="code code_color">! …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT">Побитовое отрицание</a></td>
+										<td><span class="code code_color">~ …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">Унарный плюс</a></td>
+										<td><span class="code code_color">+ …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation">Унарный минус</a></td>
+										<td><span class="code code_color">- …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">Префиксный инкремент</a></td>
+										<td><span class="code code_color">++ …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Префиксный декремент</a></td>
+										<td><span class="code code_color">-- …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></td>
+										<td><span class="code code_color">typeof …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/void">void</a></td>
+										<td><span class="code code_color">void …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">delete</a></td>
+										<td><span class="code code_color">delete …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/await">await</a></td>
+										<td><span class="code code_color">await …</span></td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Возведение в степень</a></td>
+										<td>справа налево</td>
+										<td><span class="code code_color">… ** …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="3">14</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication">Умножение</a></td>
+										<td rowspan="3">слева направо</td>
+										<td><span class="code code_color">… * …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">Деление</a></td>
+										<td><span class="code code_color">… / …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">Остаток</a></td>
+										<td><span class="code code_color">… % …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="2">13</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">Сложение</a></td>
+										<td rowspan="2">слева направо</td>
+										<td><span class="code code_color">… + …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction">Вычитание</a></td>
+										<td><span class="code code_color">… - …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="3">12</td>
+										<td><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг влево</a></td>
+										<td rowspan="3">слева направо</td>
+										<td><span class="code code_color">… &lt;&lt; …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг вправо</a></td>
+										<td><span class="code code_color">… &gt;&gt; …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Сдвиг вправо с заполнением нулей</a></td>
+										<td><span class="code code_color">… &gt;&gt;&gt; …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="6">11</td>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator" rel="nofollow">Меньше</a></td>
+										<td rowspan="6">слева направо</td>
+										<td><span class="code code_color">… &lt; …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator" rel="nofollow">Меньше или равно</a></td>
+										<td><span class="code code_color">… &lt;= …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator" rel="nofollow">Больше</a></td>
+										<td><span class="code code_color">… &gt; …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator" rel="nofollow">Больше или равно</a></td>
+										<td><span class="code code_color">… &gt;= …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/in">in</a></td>
+										<td><span class="code code_color">… in …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></td>
+										<td><span class="code code_color">… instanceof …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="4">10</td>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality" rel="nofollow">Равно</a></td>
+										<td rowspan="4">слева направо</td>
+										<td><span class="code code_color">… == …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality" rel="nofollow">Не равно</a></td>
+										<td><span class="code code_color">… != …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity" rel="nofollow">Строго равно</a></td>
+										<td><span class="code code_color">… === …</span></td>
+									</tr>
+									<tr>
+										<td><a class="new" href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity" rel="nofollow">Строго не равно</a></td>
+										<td><span class="code code_color">… !== …</span></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND">Побитовое «И»</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… &amp; …</span></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">Побитовое исключающее «ИЛИ»</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… ^ …</span></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR">Побитовое «ИЛИ»</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… | …</span></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND" rel="nofollow">Логическое «И»</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… &amp;&amp; …</span></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR" rel="nofollow">Логическое «ИЛИ»</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… || …</span></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" rel="nofollow">Условный</a></td>
+										<td>справа налево</td>
+										<td><span class="code code_color">… ? … : …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="13">3</td>
+										<td rowspan="13"><a href="/ru/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Присваивание</a></td>
+										<td rowspan="13">справа налево</td>
+										<td><span class="code code_color">… = …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… += …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… -= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… **= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… *= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… /= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… %= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… &lt;&lt;= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… &gt;&gt;= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… &gt;&gt;&gt;= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… &amp;= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… ^= …</span></td>
+									</tr>
+									<tr>
+										<td><span class="code code_color">… |= …</span></td>
+									</tr>
+									<tr>
+										<td rowspan="2">2</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/yield">yield</a></td>
+										<td rowspan="2">справа налево</td>
+										<td><span class="code code_color">yield …</span></td>
+									</tr>
+									<tr>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/yield*">yield*</a></td>
+										<td><span class="code code_color">yield* …</span></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comma_Operator" rel="nofollow">Запятая / Последовательность</a></td>
+										<td>слева направо</td>
+										<td><span class="code code_color">… , …</span></td>
+									</tr>																
+								</tbody>
+							</table><a name="Chapter6Lesson3"></a>
+						</div>				
+					</div><!-- //content -->
+				</div>
+				<div class="chapter"><!-- chapter 6 lesson 3 -->
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">6.Условные операторы</p>
+					<div class="content">
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Виды условных опрераторов</h3>
+						<div class="listol-container">
+							<ol>
+								<li><span class="code code_color">  '=='</span><span class="wrapper__text listol-container__item-content_margin-left"> - Равно</span></li>
+								<li><span class="code code_color">  '!='</span><span class="wrapper__text listol-container__item-content_margin-left"> - Не равно</span></li>
+								<li><span class="code code_color">  '==='</span><span class="wrapper__text listol-container__item-content_margin-left22"> - Строго равно</span></li>
+								<li><span class="code code_color">  '!=='</span><span class="wrapper__text listol-container__item-content_margin-left22"> - Строго не равно</span></li>
+							</ol>
+						</div>
+						<div class="separator"></div><a name="Chapter7Lesson3"></a>							
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Что лучше использовать в условных операторах: "==" или "==="?</h3>
+						<span class="code">Лучше всегда использовать <span class="code code_color">  "==="</span> так как при использовании <span class="code code_color">  "=="</span>, может происходить неявное преобразование типов.</span>
+						<div class="code">Лучше показать на <span class="wrapper__text wrapper__text_bold">примере:</span> </div>
+						<div class="separator"></div>
+						<div class="wrapper__text">Пусть <span class="code code_color">const   num = 40 </span><span class="code code_color-comments">//тип number</span></div>
+						<div class="wrapper__text">Пусть <span class="code code_color">const str = '40' </span><span class="code code_color-comments">//тип string</span></div>
+						<div class="separator"></div>
+						<input type="button" id="btnCondVar1Less3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding wrapper__input-btn_mr" value="Сравнить используя '==' ">
+						<input type="button" id="btnResetCondVar1Less3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutCondVar1Less3Ch6" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<input type="button" id="btnCondVar2Less3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding wrapper__input-btn_mr" value="Сравнить используя '==='">
+						<input type="button" id="btnResetCondVar2Less3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutCondVar2Less3Ch6" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Использование тернарных выражений</h3>
+						<div class="wrapper__text">Тернарные выражения, позволяют сократить запись с условным выражением <span class="wrapper__text wrapper__text_bold">до одной строчки:</span></div>
+						<span class="wrapper__text">Запись вида: <span class="code code_color">if(a>b){res = a}else{res = b}</span> абсолютно равнозначна записи:<span class="code code_color"> res = a>b? a : b</span></span>
+						<div class="wrapper__text">Покажем на <span class="wrapper__text wrapper__text_bold">примере:</span> </div>
+						<div class="separator"></div>
+						<div class="wrapper__text">Пусть <span class="code code_color">const a = 40 </span></div>
+						<div class="wrapper__text">Пусть <span class="code code_color">const b = 20 </span></div>						
+						<div class="separator"></div>
+						<input type="button" id="btnPracticaTernarLess3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Проверить работу тернарных выражений">
+						<input type="button" id="btnResetPracticaTernarLess3Ch6" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Очистить поле с результатом">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutPracticaTernarLess3Ch6" class="wrapper__text"></span>
+					</div>
+				</div>
+				<div class="chapter"><!-- chapter 7 lesson 3 -->
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">7.Булева логика</p>
+					<div class="contnet">
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Описания логических операторов приведены в таблице:</h3>
+						<div class="table-container">
+							<table class="boolean-table">
+								<thead>
+									<tr>
+										<th>Оператор</th>
+										<th>Использование</th>
+										<th>Описание</th>
+									</tr>									
+								</thead>	
+								<tbody>
+									<tr>
+										<td>Логическое И (<span class="wrapper__text wrapper__text_bold">&&</span>)</td>
+										<td class="wrapper__text wrapper__text_bold">expr1 && expr2</td>
+										<td><code>Возвращает значение <span class="wrapper__text wrapper__text_bold">expr1</span>, если оно может быть преобразовано в <span class="wrapper__text wrapper__text_bold">false</span>; иначе возвращает значение <span class="wrapper__text wrapper__text_bold">expr2</span>. Таким образом, при использовании с величинами типа Boolean оператор <span class="wrapper__text wrapper__text_bold">&&</span> вернет true, если оба операнда могут быть преобразованы в <span class="wrapper__text wrapper__text_bold">true</span>; иначе оператор <span class="wrapper__text wrapper__text_bold">&&</span> вернет <span class="wrapper__text wrapper__text_bold">false</span>.</code></td>
+									</tr>
+									<tr>
+										<td>Логическое ИЛИ (<span class="wrapper__text wrapper__text_bold">||</span>)</td>
+										<td class="wrapper__text wrapper__text_bold">expr1 || expr2</td>
+										<td><code>Возвращает значение <span class="wrapper__text wrapper__text_bold">expr1</span>, если оно может быть преобразовано в <span class="wrapper__text wrapper__text_bold">true</span>; иначе возвращает значение <span class="wrapper__text wrapper__text_bold">expr2</span>. Таким образом, при использовании с величинами типа Boolean оператор <span class="wrapper__text wrapper__text_bold">||</span> вернет true если хоть один из них равен <span class="wrapper__text wrapper__text_bold">true</span>; в других случаях вернет <span class="wrapper__text wrapper__text_bold">false</span>.</code></td>
+									</tr>			
+									<tr>
+										<td>Логическое НЕ (<span class="wrapper__text wrapper__text_bold">!</span>)</td>
+										<td class="wrapper__text wrapper__text_bold">!expr</td>
+										<td><code>Возвращает <span class="wrapper__text wrapper__text_bold">false</span> если значение expr можно привести к <span class="wrapper__text wrapper__text_bold">true</span>;  в противоположном случае возвращает <span class="wrapper__text wrapper__text_bold">true</span>.</code></td>
+									</tr>																
+								</tbody>						
+							</table>
+						</div>
+						<span class="wrapper__text wrapper__text_bold">Примеры</span> значений выражений, которые могут быть преобразованы в <span class="wrapper__text wrapper__text_bold">false:</span>
+						<div class="separator"></div>
+						<div class="listul-container">
+							<ul>
+								<li>
+									null;									
+								</li>
+								<li>
+									NaN;									
+								</li>
+								<li>
+									0;									
+								</li>
+								<li>
+									пустая строка ("");					
+								</li>
+								<li>
+									undefined.								
+								</li>
+							</ul>
+						</div>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold">Примечание: </span><span>Хоть операторы <span class="wrapper__text wrapper__text_bold">&&</span> и <span class="wrapper__text wrapper__text_bold">||</span> могут использовать операнды с <span class="wrapper__text wrapper__text_bold">не булевыми значениями</span>, но они всёравно рассматриваются, как булевы операторы, т.к. их возвращаемые ими значения всегда могут быть сконвертированы в булевы значения.</span>
+						<!-- Там где упоминается класс code стиль decorfont заменит соответствующий от code в стиленаписания БЭМ, менять на стиль от wrapper нельзя! -->
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Короткая схема вычислений</h3>
+						<span class="wrapper__text">Так как логические операторы выполняются <span class="wrapper__text wrapper__text_bold">слева направо</span>, они проверяются на <span class="wrapper__text wrapper__text_bold">"короткие вычисления"</span> по следующим правилам:</span>
+						<div class="separator"></div>
+						<div class="listul-container">
+							<ul>
+								<li>
+									<span class="code code_color">false && <span class="wrapper__text_i">(anything) </span></span><span class="wrapper__text">короткое вычисление дающее</span><span class="code code-color"> false</span>
+								</li>
+								<li>
+									<span class="code code_color">true || <span class="wrapper__text_i">(anything)</span></span><span class="wrapper__text"> короткое вычисление дающее</span><span class="code code-color"> true</span>
+								</li>
+							</ul>
+						</div>						
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold">Примечание: </span><span class="wrapper__text">Часть выражения <span class="code wrapper__text_i">(anything)</span> не вычисляется. Если в ней есть вызов функции, то эта функция не будет вызвана.</span>
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Логическое <span class="wrapper__text wrapper__text_bold">И</span> (<span class="wrapper__text wrapper__text_bold">&&</span>)</h3>
+						<span class="wrapper__text wrapper__text_bold">Пример</span> оператора <span class="wrapper__text wrapper__text_bold">&&</span> (<span class="wrapper__text wrapper__text_bold">логическое И</span>):
+						<div class="separator"></div>
+						<div><span class="wrapper__text wrapper__text_bold">a1</span> 	<span class="code code_color">= true &nbsp&& 	true </span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp// t && t вернёт <span class="wrapper__text wrapper__text_bold">true</span></span>
+						</div> 
+						<div><span class="wrapper__text wrapper__text_bold">a2</span> 	<span class="code code_color">= true &nbsp&& 	false</span>						     
+							<span class="code code code_color-comments">&nbsp&nbsp&nbsp// t && f вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">a3</span> 	<span class="code code_color">= false  && 	true</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp// f && t вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>		
+						<div><span class="wrapper__text wrapper__text_bold">a4</span> 	<span class="code code_color">= false  && 	(3 == 4)</span>						     
+							<span class="code code_color-comments">// f && f вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">a5</span> 	<span class="code code_color">= 'Dog'  &&  'Cat'</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// t && t вернёт <span class="wrapper__text wrapper__text_bold">'Cat'</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">a6</span> 	<span class="code code_color">= false   &&  'Cat'</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// f && t вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">a7</span> 	<span class="code code_color">= 'Cat'   &&  false</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// t && f вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>																													 
+						<div class="separator"></div><a name="Chapter8Lesson3"></a>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практические примеры</span>
+						<span class="wrapper__text">Выберите значение:</span>
+						<select id="sel1LogAndLess3Ch7" name="logical_and" class="chapter__select chapter__select_indents-mr">
+							<option selected value="true">true</option>
+							<option value="false">false</option>
+							<option value="Dog">Dog</option>
+						</select>
+						<span class="code code_color wrapper__text_bold"> && </span>
+						<span class="wrapper__text">Выберите значение:</span>
+						<select id="sel2LogAndLess3Ch7" name="logical_and" class="chapter__select chapter__select_indents-mr">
+							<option selected value="true">true</option>
+							<option value="false">false</option>
+							<option value="Cat">Cat</option>
+						</select>
+						<input type="button" id="btnPracticaLogAndLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить результат 'ЛОГИЧЕСКОГО И'">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutLogicalAndLess3Ch7" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<input type="button" id="btnResetFieldPracticaLogAndLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Очистить поле результата">
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Логическое <span class="wrapper__text wrapper__text_bold">ИЛИ</span> (<span class="wrapper__text wrapper__text_bold">||</span>)</h3>
+						<span class="wrapper__text wrapper__text_bold">Пример</span> оператора <span class="wrapper__text wrapper__text_bold">||</span> (<span class="wrapper__text wrapper__text_bold">логическое ИЛИ</span>):
+						<div class="separator"></div>
+						<div><span class="wrapper__text wrapper__text_bold">b1</span> 	<span class="code code_color">= true &nbsp||	true</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp// t||t вернёт <span class="wrapper__text wrapper__text_bold">true</span></span>
+						</div> 
+						<div><span class="wrapper__text wrapper__text_bold">b2</span> 	<span class="code code_color">= false ||	true</span>						     
+							<span class="code code code_color-comments">&nbsp&nbsp&nbsp&nbsp// f||t вернёт <span class="wrapper__text wrapper__text_bold">true</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">b3</span> 	<span class="code code_color">= true &nbsp||	false</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// t||f вернёт <span class="wrapper__text wrapper__text_bold">true</span></span>
+						</div>		
+						<div><span class="wrapper__text wrapper__text_bold">b4</span> 	<span class="code code_color">= false ||	(3 == 4)</span>						     
+							<span class="code code_color-comments">// f||f вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">b5</span> 	<span class="code code_color">= 'Dog' || 'Cat'</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// t||t вернёт <span class="wrapper__text wrapper__text_bold">'Dog'</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">b6</span> 	<span class="code code_color">= false  || 'Cat'</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// f||t вернёт <span class="wrapper__text wrapper__text_bold">'Cat'</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">b7</span> 	<span class="code code_color">= 'Dog'  || false</span>						     
+							<span class="code code_color-comments">&nbsp&nbsp&nbsp// t||f вернёт <span class="wrapper__text wrapper__text_bold">'Dog'</span></span>
+						</div>																													 
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практические примеры</span>
+						<span class="wrapper__text">Выберите значение:</span>
+						<select id="sel1LogOrLess3Ch7" name="logical_and" class="chapter__select chapter__select_indents-mr">
+							<option selected value="true">true</option>
+							<option value="false">false</option>
+							<option value="Dog">Dog</option>
+						</select>
+						<span class="code code_color wrapper__text_bold"> || </span>
+						<span class="wrapper__text">Выберите значение:</span>
+						<select id="sel2LogOrLess3Ch7" name="logical_and" class="chapter__select chapter__select_indents-mr">
+							<option selected value="true">true</option>
+							<option value="false">false</option>
+							<option value="Cat">Cat</option>
+						</select>
+						<input type="button" id="btnPracticaLogOrLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить результат 'ЛОГИЧЕСКОГО ИЛИ'">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutLogicalOrLess3Ch7" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<input type="button" id="btnResetFieldPracticaLogOrLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding" value="Очистить поле результата">
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Логическое <span class="wrapper__text wrapper__text_bold">НЕ</span> (<span class="wrapper__text wrapper__text_bold">!</span>)</h3>
+						<span class="wrapper__text wrapper__text_bold">Пример</span> оператора <span class="wrapper__text wrapper__text_bold">!</span> (<span class="wrapper__text wrapper__text_bold">логическое НЕ</span>):
+						<div class="separator"></div>
+						<div><span class="wrapper__text wrapper__text_bold">n1</span> 	<span class="code code_color">= !true</span>						     
+							<span class="code code_color-comments">&nbsp// !true вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div> 
+						<div><span class="wrapper__text wrapper__text_bold">n2</span> 	<span class="code code_color">= !false</span>						     
+							<span class="code code code_color-comments">// !false вернёт <span class="wrapper__text wrapper__text_bold">true</span></span>
+						</div>
+						<div><span class="wrapper__text wrapper__text_bold">n3</span> 	<span class="code code_color">= !'Cat'</span>						     
+							<span class="code code_color-comments">// !true вернёт <span class="wrapper__text wrapper__text_bold">false</span></span>
+						</div>		
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практические примеры</span>
+						<span class="wrapper__text">Выберите значение:</span>
+						<span class="code code_color wrapper__text_bold"> ! </span>						
+						<select id="sel1LogNotLess3Ch7" name="logical_and" class="chapter__select chapter__select_indents-mr">
+							<option selected value="true">true</option>
+							<option value="false">false</option>
+							<option value="Cat">Cat</option>
+						</select>
+						<input type="button" id="btnPracticaLogNotLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить результат 'ЛОГИЧЕСКОГО НЕ'">
+						<span class="wrapper__text wrapper__text_bold">Результат сравнения:</span>
+						<span id="txtOutLogicalNotLess3Ch7" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<input type="button" id="btnResetFieldPracticaLogNotLess3Ch7" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Очистить поле результата">
+					</div><!--// end content -->
+				</div><!--// end chapter 7 -->	
+				<div class="chapter"><!-- chapter 8 --><a name="Chapter9Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">8.Понятие о функциях </p>		
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Как задать (описать) функцию</h3>
+						<span class="wrapper__text wrapper__text_block wrapper__text_indents-mb3">Пример описания простейшей функции:</span>
+						<span class="code code code_block code_color"><span class="code code_color-blue">function</span> calculateAge(year){</span>
+						<span class="code code code_block code_color code_indents-pl"><span class="code code_color-blue">return</span> 2020 - year</span>
+						<span class="code code code_block code_color">}</span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практический пример</span>
+						<span class="code code code_inline-block code_color"><span class="code code_color-blue">function</span> calculateAge(</span>
+						<select id="selFuncCalcAgeLess3Ch8" name="logical_and" class="chapter__select">
+							<option value="2010">2010</option>
+							<option value="2009">2009</option>
+							<option value="2008">2008</option>
+							<option value="2007">2007</option>
+							<option value="2006">2006</option>
+							<option value="2005">2005</option>
+							<option value="2004">2004</option>
+							<option value="2003">2003</option>
+							<option value="2002">2002</option>
+							<option selected value="1980">1980</option>
+						</select>						
+						<span class="code code code_inline-block code_color">)</span>
+						<input type="button" id="btnFuncCalcAgeLess3Ch8" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить результат работы функции">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<span id="txtOutFuncCalcAgeLess3Ch8" class="wrapper__text"></span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_block wrapper__text_indents-mb3">Из функции можно создавать целые композиции (вызов одной функции из другой):</span>
+						<span class="code code code_block code_color"><span class="code code_color-blue">function</span> LogInfoAbout(name, year){</span>
+						<span class="code code code_block code_color code_indents-pl"><span class="code code_color-blue">return</span> name + 'is ' + calculateAge(year)+' years old'</span>
+						<span class="code code code_block code_color">}</span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практический пример</span>
+						<span class="code code code_inline-block code_color"><span class="code code_color-blue">function</span> LogInfoAbout(</span>
+						<input type="wrapper__text" id="txtNameFuncLogInfoAboutLess3Ch8" class="chapter__input-text chapter__input-text_w45" maxlength="25"  placeholder="Введите значение переменной" value="Egor">
+						<span class="code code code_inline-block code_color">, </span>						
+						<select id="selFuncLogInfoAboutLess3Ch8" name="logical_and" class="chapter__select">
+							<option value="2011">2011</option>
+							<option value="2010">2010</option>
+							<option value="2009">2009</option>
+							<option value="2008">2008</option>
+							<option value="2007">2007</option>
+							<option value="2006">2006</option>
+							<option value="2005">2005</option>
+							<option value="2004">2004</option>
+							<option value="2003">2003</option>
+							<option value="2002">2002</option>
+							<option selected value="1980">1980</option>
+						</select>
+						<span class="code code code_inline-block code_color">) </span>
+						<input type="button" id="btnLogInfoAboutLess3Ch8" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить результат работы функции">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>						
+						<span id="txtOutLogInfoAboutLess3Ch8" class="wrapper__text"></span>
+				</div><!--// end chapter 8-->
+				<div class="chapter"><!-- chapter 9 -->
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">9.Основное о массивах </p>		
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Методы задания массивов</h3>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">a) Через <span class="wrapper__text_bold wrapper__text_indents-mr100">[]:</span><span class="wrapper__text wrapper__text_color-red">Наиболее удобный способ создания массива!</span></span>
+						<span class="code code_redindents-code code_block code_color">const cars = ['mazda','bmw', 'ford']</span>
+						<span class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3">Если просто выведем массив <span class="wwraper__text wrapper__text_bold">cars</span> в текстовое поле, то результат будет таким:</span>						
+						<span id="txtOut1ArrayCarLess3Ch9" class="code code_color-console"></span>
+						<div class="wrapper__text wrapper__text_indents-mb3">Если сделать вывод массива через функцию <span class="code code_color">console.log(cars)</span>, мы увидим следующее:</div>				
+						<span id="txtOut1ArrayCarLess3Ch9" class="code code_color-console"></span>
+						<div class="code">&gt;<span class="wrapper__text_i code code_color-comments">(3) [</span><span class="wrapper__text_i code code_color-console">"mazda"</span><span class="wrapper__text_i code code_color-comments">,</span> <span class="wrapper__text_i code code_color-console">"bmw"</span><span class="wrapper__text_i code code_color-comments">,</span> <span class="wrapper__text_i code code_color-console">"ford"</span><span class="wrapper__text_i code code_color-comments">]</span></div>
+						<div class="code code_redindents-console"><span class="code code_color-index-console">0</span>: "<span class="code code_color-console">mazda</span>"</div>
+						<div class="code code_redindents-console"><span class="code code_color-index-console">1</span>: "<span class="code code_color-console">bmw</span>"</div>
+						<div class="code code_redindents-console"><span class="code code_color-index-console">2</span>: "<span class="code code_color-console">ford</span>"</div>
+						<div class="code code_redindents-console"><span class="code code_color-length-array-console">length</span>: <span class="code code_color-blue">3</span></div>
+						<div class="code code_redindents-console">&gt;<span class="code code_color-length-array-console">__proto__</span>: <span class="code code_color-comments">Array(0)</span></div>
+						<div class="separator"></div>
+						<span class="wrapper__text">Здесь мы видим из чего на самом деле состоит наш объект <span class="code code_color">cars</span>.</span>
+						<span class="wrapper__text wrapper__text_indents-mb3">Где цифры сбоку это <span class="wrapper__text_i"> индексы</span> массива, справо от них - <span class="wrapper__text_i">элементы массива </span>.</span>
+						<div class="wrapper__text wrapper__text_indents-mb3">Ниже идет свойство<span class="code code_color-length-array-console"> length</span>, которое хранит текущее количество элементов в массиве. А еще ниже - мы видим прототип, о котором будет идити речь далее в будущих уроках.</div>
+						<div class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">b) Создание массива через <span class="wrapper__text_bold">конструктор</span>:</div>						
+						<div class="wrapper__text code_redindents-code "><span class="code code_redindents-code code_color">const cars = new Array()</span> что равносильно записи<span class="code code_color"> const cars = []</span> - создается массив без элементов.</div>
+						<div class="wrapper__text code_redindents-code "><span class="code code_redindents-code code_color">const cars = new Array(10)</span> - создается пустой массив указанной длины.</div>
+						<div class="wrapper__text code_redindents-code "><span class="code code_redindents-code code_color">const cars = new Array('mazda','bmw', 'ford')</span> что равносильно записи<span class="code code_color"> const cars = ['mazda','bmw', 'ford']</span> - создается массив c 3-я элементами.</div>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практические примеры</span>
+						<span class="wrapper__text">Выберите вариант задания массива:</span>											
+						<select id="sel1ArrayLess3Ch9" name="exampleArray1" class="chapter__select chapter__select_indents-mr code code_color">
+							<option selected value="var1" class="code code_color">const cars = []</option>
+							<option value="var2" class="code code_color">const cars = new Array()</option>
+							<option value="var3" class="code code_color">const cars = ['mazda','bmw','ford']</option>
+							<option value="var4" class="code code_color">const cars = new Array('bmw','mazda','ford')</option>
+						</select>
+						<div class="separator"></div>
+						<input type="button" id="btnArrayLess3Ch9" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Посмотреть результат вывода созданного массива">
+						<span class="wrapper__text wrapper__text_bold">Результат:</span>
+						<span id="textOutArrayLess3Ch9" class="wrapper__text"></span>
+						<div class="separator"></div>						
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Обращение к элементам массивов</h3>
+						<span class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mr10">Из предыдущего раздела (про методы задания массивов) уже известно, что индексы элементов массивов в <span class="wrapper__text wrapper__text_color-red">JavaScript</span> начинаются с 0. Также познакомились со свойством <span class="code code_color">length</span>, которое отвечает за количество элементов в массиве (так сказать его длина). Так что далее будет показан способ обращения к элементам массива посредством <span class="wrapper__text_bold">[]:</span> </span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практические примеры</span>
+						<span class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3">Допустим у нас есть следующий массив:<span class="code code_color">const literal = ['a','b','c','d']</span>. Мы хотим посредством ввода соответствующего индекса посмотреть содержимое элемента, который соответствует этому индексу:</span>
+						<p class="code code_color code_redindents-code">literal[<select id="selIndexOfArrayLess3Ch9" name="exampleArray2" class="chapter__select  code code_color">
+							<option value="-3" class="code code_color">-3</option>
+							<option value="-2" class="code code_color">-2</option>
+							<option value="-1" class="code code_color">-1</option>							
+							<option selected value="0" class="code code_color">0</option>
+							<option value="1" class="code code_color">1</option>
+							<option value="2" class="code code_color">2</option>
+							<option value="3" class="code code_color">3</option>
+							<option value="4" class="code code_color">4</option>
+							<option value="5" class="code code_color">5</option>
+						</select>] = <span id="textOutIndexOfArrayLess3Ch9" class="wrapper__text"></span>
+						</p>
+						<div class="separator"></div>
+						<input type="button" id="btnIndexOfArrayLess3Ch9" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Получить элемент массива /\">
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Возможность расширения массивов</h3>
+						<span class="wrapper__text wrapper__text_block wrapper__text_indents-mb3">a) Пример расширения массива используя <span class="wrapper__text wrapper__text_bold">индекс:</span></span>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">Пусть будет задан опять массив <span class="code code_color">const cars = ['mazda','bmw','ford']</span>. Видно, что у него 3 индекса <span class="wrapper__text wrapper__text_i">(0, 1, 2)</span>.</div>
+						<div class="wrapper__text code_redindents-code wrapper__text_indents-mb3"> Ниже, попробуйте добавить еще  несколько элементов в массив используя индекс:</div>
+						<span class="code code_color code_redindents-code code_inline-block">cars[<select id="selAddOrChangeArrayLess3Ch9" name="exampleArray3" class="chapter__select  code code_color">
+							<option value="0" class="code code_color">0</option>
+							<option value="1" class="code code_color">1</option>
+							<option value="2" class="code code_color">2</option>
+							<option value="3" class="code code_color">3</option>
+							<option value="4" class="code code_color">4</option>
+							<option value="5" class="code code_color">5</option>
+							<option value="6" class="code code_color">6</option>
+							<option value="7" class="code code_color">7</option>
+							<option value="70" class="code code_color">70</option>
+						</select>] = <input type="text" id="newElementToArrayTxtLess3Ch9" class="chapter__input-text chapter__input-text_w180" maxlength="20"  placeholder="Введите марку автомобиля" value="">
+						</span>
+							<input type="button" id="btnAddOrChangeArrayLess3Ch9" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Добавить элемент и вывести весь массив">
+							<span class="wrapper__text wrapper__text_bold">Результат:</span>
+							<span id="textOutNewArrayLess3Ch9" class="wrapper__text"></span>		
+							<div class="separator"></div>					
+							<span class="wrapper__text wrapper__text_block wrapper__text_indents-mb3">b) Пример использования свойства <span class="code code_color wrapper__text_bold">length</span>, чтобы всегда добавлять новый элемент в конец массива :</span>
+							<div class="wrapper__text wrapper__text_block code_redindents-code wrapper__text_indents-mb3">Берем за основу все тот же массив <span class="code code_color">const cars = ['mazda','bmw','ford']</span>. Будем добавлять новые элементы в конец:</div>
+							<span class="code code_color code_redindents-code code_inline-block">
+								<input type="text" id="inpNewElementToEndArrayLess3Ch9" class="chapter__input-text chapter__input-text_w180" maxlength="20"  placeholder="Введите марку автомобиля" value="">
+							</span>
+							<input type="button" id="btnNewElementToEndArrayLess3Ch9" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Добавить элемент и вывести весь массив">
+							<span class="wrapper__text wrapper__text_bold">Результат:</span>
+							<span id="textOutNewElementToEndArrayLess3Ch9" class="wrapper__text"></span>
+							<div class="separator"></div>
+
+				</div><!--// end chaper 9-->
+				<div class="chapter"><!-- chapter 10 --><a name="Chapter10Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">10.Основное о циклах </p>		
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Применение циклов для итерирования массивов</h3>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">a) Метод <span class="wrapper__text_bold">for.</span> Он является <span class="wrapper__text wrapper__text_bold wrapper__text_i">классическим</span>способом итерации массивов.</span>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">Рассмотрим этот метод на примере уже известного нам массива: <span class="code code_color">const cars = ['mazda','bmw','ford','renault'].</span> 
+							<p class="code code_color">for(let i=0; i < cars.length; i++){</p>
+							<p class="code code_color wrapper__text_indents-ml20">console.log('cars['+i+'] = '+cars[i])</p>
+							<p class="code code_color">}</p>
+						</div>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_bold wrapper__text_block wrapper__text_indents-mb3">Практический пример</span>
+						<div class="separator"></div>
+						<input type="button" id="btnCycleForLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вывести элемент массива cars">
+						<span class="wrapper__text wrapper__text_bold wrapper__text_inline-block wrapper__text_indents-mb3">Результат:</span>
+						<span id="textOutCycleForLess3Ch10" class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3"></span>
+						<div class="separator"></div>						
+						<input type="button" id="btnResetCycleForLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вернуться указатель в начало массива">	
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">b) Метод <span class="wrapper__text_bold">while.</span> Он является <span class="wrapper__text wrapper__text_bold wrapper__text_i">базовым</span> циклом для JavaScript.</span>						
+						<div class="wrapper__text wrapper__text_block code_redindents-code">Приведём пример на массиве <span class="wrapper__text wrapper__text_bold">cars</span>: <span class="code code_color">const cars = ['mazda','bmw','ford','renault'].</span> 
+							<p class="code code_color-comments">//Назначим начальное значение переменной-итератору i. Это значение будет менятся в цикле, и будет проверяться в условном выражении, в самом начале цикла</p>
+							<p class="code code_color">let i = 0</p>
+							<p class="code code_color">while(i < cars.length){</p>
+							<p class="code code_color wrapper__text_indents-ml20">console.log(cars[i])</p>
+							<p class="code code_color wrapper__text_indents-ml20">i++</p>
+							<p class="code code_color">}</p>
+						</div>
+						<div class="separator"></div>
+						<input type="button" id="btnCycleWhileLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вывести массив cars">
+						<span class="wrapper__text wrapper__text_bold wrapper__text_inline-block wrapper__text_indents-mb3">Результат:</span>
+						<span id="textOutCycleWhileLess3Ch10" class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3"></span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">c) Метод <span class="wrapper__text_bold">do/while</span> во многом похож на цикл <span class="wrapper__text wrapper__text_bold">while</span>, за исключением того, что выражение цикла проверяется в конце, а не в начале. Это значит, что тело цикла всегда выполняется как минимум один раз. Эта инструкция имеет следующий синтаксис:</span>
+						<div class="wrapper__text wrapper__text_block code_redindents-code"><span class="code code_color">const cars = ['mazda','bmw','ford','renault'].</span> 
+							<p class="code code_color">let i = 0</p>
+							<p class="code code_color">{</p>
+							<p class="code code_color wrapper__text_indents-ml20">console.log(cars[i])</p>
+							<p class="code code_color">}</p>
+							<p class="code code_color">while(++i < cars.length)</p>
+						</div>	
+						<div class="separator"></div>
+						<input type="button" id="btnCycleDoWhileLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вывести массив cars">
+						<span class="wrapper__text wrapper__text_bold wrapper__text_inline-block wrapper__text_indents-mb3">Результат:</span>
+						<span id="textOutCycleDoWhileLess3Ch10" class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3"></span>																							
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">d) Метод <span class="wrapper__text_bold">for/in</span>  использует ключевое слово <span class="wrapper__text wrapper__text_bold">for</span>, но он в корне отличается от обычного цикла <span class="wrapper__text wrapper__text_bold">for</span>. Цикл <span class="wrapper__text wrapper__text_bold">for/in</span> имеет следующий синтаксис:</span>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">
+							<p class="code code_color">for (<span class="code code_color wrapper__text_i">переменная</span> in <span class="code code_color wrapper__text_i">объект</span>)</p>
+							<p class="code code_color">{</p>
+							<p class="code code_color wrapper__text_indents-ml20"><span class="code code_color wrapper__text_i">инструкция</span></p>
+							<p class="code code_color">}</p>
+						</div>											
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">Этот цикл рассматриваться на примере итерации массива, <span class="wrapper__text wrapper__text_bold">не будет</span>, так как он для этого не подходит. Но он  позволяет выполнить обход свойств объекта, т.е. его лучше использовать для работы с объектами типа: <span class="code code_color">var obj = {name:'Alex', password:'12345'}</span></span>
+						<div class="separator"></div>
+						<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">e) В последних версиях <span class="wrapper__text wrapper__text_color-blue">JavaScript</span> появился более удобный цикл, нежели классический <span class="wrapper__text_bold">for</span>.</span>  
+						<span class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3">Этот цикл называется <span class="wrapper__text wrapper__text_bold">for/of</span></span>.
+						 <span class="wrapper__text wrapper__text_block wrapper__text_indents-mb3">Рассмотрим синтаксис этого цикла на примере массива <span class="wrapper__text wrapper__text_bold">cars</span>:</span>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">
+							<span class="code code_color">const cars = ['mazda','bmw','ford','renault']</span> 
+							<p class="code code_color">for ( let car of cars)</p>
+							<p class="code code_color">{</p>
+							<p class="code code_color wrapper__text_indents-ml20">console.log(car)</p>
+							<p class="code code_color">}</p>
+						</div>					
+						<div class="separator"></div>
+						<input type="button" id="btnCycleForOfLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вывести массив cars">
+						<span class="wrapper__text wrapper__text_bold wrapper__text_inline-block wrapper__text_indents-mb3">Результат:</span>
+						<span id="textOutCycleForOfLess3Ch10" class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3"></span>
+						<div class="separator"></div>						
+						<input type="button" id="btnResetCycleForOfLess3Ch10" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml wrapper__text wrapper__text_inline-block wrapper__text_indents-mb3" value="Вернуться указатель в начало массива">	
+						<div class="separator"></div>						
+				</div><!--// end chaper 10-->
+				<div class="chapter"><!-- chapter 11 --><a name="Chapter11Lesson3"></a>
+					<p class="chapter__heading chapter__heading_decor chapter__heading_margin">11.Основное об объектах </p>		
+					<div class="separator"></div>
+					<div class="wrapper__text wrapper__text_indents-mb3"><span class="wrapper__text wrapper__text_bold">Определение:</span>
+						Объект является фундаментальным типом данных в языке <span class="wrapper__text wrapper__text_color-blue">JavaScript</span>. <span class="wrapper__text wrapper__text_bold">Объект</span> - это составное значение: он объединяет в себе набор значений (простых значений или других объектов) и позволяет сохранять и извлекать эти значения по именам.	
+					</div>				
+					<h3 class="chapter__header-h3 chapter__header-h3_underline">Способы создания объектов</h3>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							a) Создание объектов с помощью оператора <span class="wrapper__text_bold">new:</span> 
+						</div>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">
+							<p class="code code_color">let o = new Object()
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp// Создать новый пустой объект: то же, что и {}</span>
+							</p> 
+							<p class="code code_color">let a = new Array()
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp// Создать пустой массив: то же, что и []</span>
+							</p>
+							<p class="code code_color">let d = new Date()
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// Создать объект Date, представляющий текущее время</span>
+							</p>
+							<p class="code code_color">let r = new RegExp("js")
+								<span class="code code_color-comments">// Создать объект RegExp для операций сопоставления с шаблоном</span>
+							</p>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							b) Создание объектов с помощью <span class="wrapper__text_bold">{}:</span> 
+						</div>
+						<div class="wrapper__text wrapper__text_block code_redindents-code">
+							<p class="code code_color">const person = {
+							</p> 
+							<p class="code code_color wrapper__text_indents-ml20">firstName:'Egor'<span class="code wrapper__text_color-red wrapper__text_bold">,</span>
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// firstName - поле объекта, хранит имя</span>
+							</p>
+							<p class="code code_color wrapper__text_indents-ml20">lastName: 'Shulga'<span class="code wrapper__text_color-red wrapper__text_bold">,</span>
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp// lastName - поле объекта, хранит фамилию</span>
+							</p>
+							<p class="code code_color wrapper__text_indents-ml20">yearBirth: 1980<span class="code wrapper__text_color-red wrapper__text_bold">,</span>
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// целочисленное значение </span>								
+							</p>
+							<p class="code code_color wrapper__text_indents-ml20">hasWife: true<span class="code wrapper__text_color-red wrapper__text_bold">,</span>
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// здесь поместили булево значение </span>								
+							</p>							
+							<p class="code code_color wrapper__text_indents-ml20">languages: ['ru','en']<span class="code wrapper__text_color-red wrapper__text_bold">,</span>
+								<span class="code code_color-comments">// в этом поле объекта мы поместили массив</span>								
+							</p>	
+							<p class="code code_color wrapper__text_indents-ml20">greet: function(){
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp&nbsp&nbsp// а здесь будем хранить анонимную функцию, которую правильнее в данном контексте, назвать методом</span>
+							</p>
+							<p class="code code_color wrapper__text_indents-ml40">alert('Greet!!!')
+								<span class="code code_color-comments">&nbsp&nbsp&nbsp// тело метода</span>
+							</p>
+							<p class="code code_color wrapper__text_indents-ml20">}
+							</p>	
+							<p class="code code_color wrapper__text_indents">}
+							</p>																																			
+						</div>
+					<div class="wrapper__text wrapper__text_indents-mb3"><span class="wrapper__text wrapper__text_bold wrapper__text_color-red">Обратите внимание:</span>
+						Запятые, между полями объекта, специально выделены (<span class="wrapper__text wrapper__text_bold wrapper__text_color-red">красным цветом</span>), так как они обязательны!	
+					</div>	
+					<div class="separator"></div>																													
+					<div class="wrapper__text wrapper__text_indents-mb3"><span class="wrapper__text wrapper__text_bold">Определение:</span>
+						Функция, заданная в контексте какого-либо объекта, назвается <span class="wrapper__text wrapper__text_bold">методом.</span>
+					</div>											
+					<div class="separator"></div>																								
+					<h3 class="chapter__header-h3 chapter__header-h3_underline">Как пользоваться объектами</h3>	<a name="lesson3chapter11_2b"></a>		
+						<div class="wrapper__text  wrapper__text_indents-mb3">
+							a) Можно посмотреть содержимое объекта <span class="wrapper__text_bold">person</span>, используя например метод <span class="code code_color wrapper__text_bold">console.log(person)</span>:
+						</div>
+						<p class="wrapper__text_i">
+								<span >&gt;</span>
+								<span class="code code_color-comments">{firstName:</span>
+								<span class="code code_color-console">"Egor"</span>
+								<span class="code code_color-comments">, lastName:</span>
+								<span class="code code_color-console">"Shulga"</span>
+								<span class="code code_color-comments">, yearBirth:</span>
+								<span class="code code_color-blue">1980</span>
+								<span class="code code_color-comments">, hasWife:</span>
+								<span class="code code_color-blue">true</span>
+								<span class="code code_color-comments">, languages: Array(2), ...}</span>
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-index-console code_redindents-console code_indents-pl-11">firstName</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-console">"Egor"</span>
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-comments">&gt;</span>
+							<span class="code code_color-index-console">greet</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-blue wrapper__text_i">f</span>
+							<span class="code code_color-comments wrapper__text_i">()</span>		
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-index-console code_redindents-console code_indents-pl-11">hasWife</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-blue">true</span>
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-comments">&gt;</span>
+							<span class="code code_color-index-console">languages</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-comments code_color-lighten-gray-console">(2)</span>
+							<span class="code">[</span>
+							<span class="code code_color-console">"ru"</span>					
+							<span class="code">,</span>						
+							<span class="code code_color-console">"en"</span>					
+							<span class="code">]</span>						
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-index-console code_redindents-console code_indents-pl-11">lastName</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-console">"Shulga"</span>
+						</p>
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-index-console code_redindents-console code_indents-pl-11">yearBirth</span>
+							<span class="code code_color-comments">:</span>
+							<span class="code code_color-blue">1980</span>
+						</p>	
+						<p class="wrapper__text code_redindents-console">
+							<span class="code code_color-comments">&gt;</span>
+							<span class="code code_color-length-array-console">__proto__</span>
+							<span class="code code_color-comments">:</span>
+	 						<span class="code code_color-comments">Object</span>		
+						</p>
+						<div class="separator"></div>
+						<div class="wrapper__text  wrapper__text_indents-mb3">
+							b) Можно обратиться к конкретному полю объекта <span class="wrapper__text_bold">person</span>:
+						</div>
+						<p class="wrapper__text wrapper__text_block code_redindents-code">
+							<span class="wrapper__text">Выберите свойство объекта</span>
+							<span class="wrapper__text code_color wrapper__text_bold">person</span>
+							<span class="code code_color code_redindents-code">[<select id="selPropertyLess3Ch11" class="chapter__select  code code_color">
+									<option value="firstName" class="code code_color">firstName</option>
+									<option value="lastName" class="code code_color">lastName</option>
+									<option value="yearBirth" class="code code_color">yearBirth</option>
+									<option value="hasWife" class="code code_color">hasWife</option>
+									<option value="languages" class="code code_color">languages</option>
+									<option value="greet" class="code code_color">greet</option>
+								</select>]
+							</span>
+							<input type="button" id="btnPropertyLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести значение свойства">
+							<span class="wrapper__text wrapper__text_bold">Результат:</span>
+							<span id="textOutPropertyLess3Ch11" class="wrapper__text"></span>
+						</p>
+					<div class="separator"></div>																							
+					<h3 class="chapter__header-h3 chapter__header-h3_underline">Методы обращения в свойствами объекта</h3>
+					<div class="separator"></div>
+					<div class="wrapper__text  wrapper__text_indents-mb3">
+						a) Обращение к свойству объекта посредством "<span class="wrapper__text_bold wrapper__text_fontsize-20">.</span>":
+					</div>	
+					<p class="wrapper__text wrapper__text_block code_redindents-code">
+						<span class="code code_color ">person</span><span class="wrapper__text_bold wrapper__text_fontsize-20">.</span>
+							<span class="code code_color">
+								<select id="selPropertyByDottLess3Ch11" class="chapter__select chapter__select_no-border code code_color">
+									<option value="firstName" class="code code_color">firstName</option>
+									<option value="lastName" class="code code_color">lastName</option>
+									<option value="yearBirth" class="code code_color">yearBirth</option>
+									<option value="hasWife" class="code code_color">hasWife</option>
+									<option value="languages" class="code code_color">languages</option>
+									<option value="greet" class="code code_color">greet</option>
+								</select>
+							</span>
+							<input type="button" id="btnPropertyByDottLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести значение свойства">
+							<span class="wrapper__text wrapper__text_bold">Результат:</span>
+							<span id="textOutPropertyByDottLess3Ch11" class="wrapper__text"></span>							
+						</p>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<span class="wrapper__text wrapper__text_bold wrapper__text_color-red">Замечание от меня:</span>
+							<span class="wrapper__text wrapper__text">Используя "<span class="wrapper__text_bold wrapper__text_fontsize-20">.</span>" как вариант
+							обращения к свойствам объекта мне <span class="wrapper__text wrapper__text_color-red">не удалось скомпилировать</span> код 
+							<span class="code code_color wrapper__text_bold">person.`${greet}`()</span>. 
+							Это было нужно для удобства написания кода, так как когда мы выбираем в интерфейсе поле объекта (в раскрывающемся списке), в коде 
+							<span class="wrapper__text  wrapper__text_bold">javascript</span> 
+							мы получаем текстовую интерпретацию выбранных полей. К примеру выбирая 
+							<span class="code code_color wrapper__text_bold">firstName</span> - мы получаем в строковую переменную 
+							<span class="code code_color wrapper__text_bold">strValselPropertyByDottLess3Ch11</span> строковое значение 
+							<span class="code code_color wrapper__text_bold">"firstName"</span>. Поэтому пришлось воспользоваться конструкцией
+							<span class="code code_color wrapper__text_bold">switch...case</span>, где в зависимости от значения строки производился вызов того, 
+							или иного свойства. Например для значения <span class="wrapper__text wrapper__text_bold">firstName</span> 
+							предназначен вот такой кусок кода: <span class="code code_color wrapper__text_bold"> case 'firstName':res = person.firstName</span>.
+						</span>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text  wrapper__text_indents-mb3">
+							b) Обращение к свойству объекта посредством <span class="wrapper__text_bold">[]</span>. 
+							Этот вариант обращения как раз применен в разделе <span class="wrapper__text wrapper__text_underline">"Как пользоваться объектами"</span> 
+							в пункте <span class="wrapper__text wrapper__text_bold"><a href="#lesson3chapter11_2b">
+							<span class="wrapper__text wrapper__text_color-red">b)</span></a></span>
+							<p><span class="wrapper__text wrapper__text_bold">Стоит отметить:</span>Что в этом случае, как раз работает подход, 
+							обращения к свойствам объекта через обратные кавычки <span class="wrapper__text wrapper__text_bold wrapper__text_fontsize-17"> ``</span>  
+							(о которых речь пойдет в следующих уроках). 
+							<span class="wrapper__text wrapper__text_inline-block  wrapper__text_indents-mb3">Вот фрагмент кода демонстрирующий это:</span> 
+							</p>
+							<p class="code code_color-comments code_redindents-code wrapper__text_indents-mb3">// В переменную <span class="code wrapper__text_bold">strValselPropertyLess3Ch11</span>
+								получаем строковое значение - имя свойства объекта, которое выбрали через выпадающий список
+							</p>							
+							<p class="code code_color code_redindents-code wrapper__text_indents-mb3">  let <span class="code wrapper__text_bold">strValselPropertyLess3Ch11</span> = document.getElementById('selPropertyLess3Ch11').options[indexselPropertyLess3Ch11].value
+							</p>
+							<p class="code code_color code_redindents-code">								
+							document.getElementById('textOutPropertyLess3Ch11').innerHTML = person[<span class="code wrapper__text_bold">`${strValselPropertyLess3Ch11}`</span>]
+							</p>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text  wrapper__text_indents-mb3">
+							с) Использование "<span class="wrapper__text_bold">динамических ключей</span>" при обращении к свойству объекта (т.е. использование переменной): Код выше <span class="wrapper__text wrapper__text_fontsize-17">&#11014;</span>, как раз показывает такое использование.
+						</div>
+						<div class="separator"></div>
+						<p class="wrapper__text  wrapper__text_indents-mb3">
+							d) Можно изменять значение ключей. Например изменить значение по ключу <span class="wrapper__text wrapper__text_bold">hasWife</span>:
+						</p>
+						<p class="code code_color code_redindents-code wrapper__text_indents-mb3"><span class="code code_color">person.hasWife = </span>
+							<span id="textOutLookPropertyNowLess3Ch11" class="wrapper__text"></span> 
+						</p>	
+						<p class="wrapper__text code_redindents-code">
+							<input type="button" id="btnLookPropertyNowLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Вывести значение свойства">
+						</p>						
+						<div class="separator"></div>		
+						<p class="wrapper__text  wrapper__text_indents-mb3">
+							Ниже можно поменять значение этого свойства 	<span class="wrapper__text wrapper__text_fontsize-17">&#11015;</span>
+						</p>
+						<p class="wrapper__text wrapper__text_block code_redindents-code wrapper__text_indents-mb3">
+						<select id="selChangeProperty3Ch11" class="chapter__select code code_color">
+									<option value="true" class="code code_color">true</option>
+									<option selected value="false" class="code code_color">false</option>
+						</select>						
+							<input type="button" id="btnChangePropertyLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Изменить значение свойства">
+						</p>
+						<div class="separator"></div>
+						<div class="wrapper__text  wrapper__text_indents-mb3">
+							e) Можно добавлять новые ключи в объект. <span class="wrapper__text_bold">Пример:</span>:
+						</div>
+						<div class="wrapper__text code_redindents-code  wrapper__text_indents-mb3">
+							Например, добавим объекту <span class="code code_color wrapper__text wrapper__text_bold">person</span> 
+							новый ключ <span class="code code_color wrapper__text wrapper__text_bold">isProgrammer = true</span>
+							<input type="button" id="btnShowPersonLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести объект person">
+						</div>	
+						<p id="textOutShowPersonLess3Ch11" class="wrapper__text"></p>
+						<div class="separator"></div>
+						<div class="wrapper__text code_redindents-code  wrapper__text_indents-mb3">
+							<input type="button" id="btnAddNewPropertyLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Добавить новое свойство isProgrammer">
+							<input type="button" id="btnClearFieldOutPropObjLess3Ch11" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Очистить поле вывода и удалить новое свойство">
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<span class="wrapper__text wrapper__text_bold wrapper__text_color-blue">Заключение:</span>
+							<p class="wrapper__text wrapper__text_indents-mb3">
+								При помощи объектов мы можем описывать различные модели, 
+								благодаря тому, что объекты могут группировать в себе много различных сущностей и методов.
+							</p>
+						</div>																																								
+				</div><!--// end chaper 11-->				
+			</div><!--// end lesson 3-->
+			<div class="lesson lesson_evenlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<a class="bookmark" name="lesson4"></a>
+				<p class="lesson__heading lesson__heading_margin">Урок 4:</p>
+			</div><!--// end lesson 4-->			
+			<div class="lesson lesson_oddlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<a class="bookmark" name="lesson5"></a>
+				<p class="lesson__heading lesson__heading_margin">Урок 5:</p>
+			</div><!--// end lesson 5-->
+			<div class="lesson lesson_evenlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<a class="bookmark" name="lesson6"></a>
+				<p class="lesson__heading lesson__heading_margin">Урок 6:</p>
+			</div><!--// end lesson 6-->			
+			<div class="lesson lesson_oddlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<a class="bookmark" name="lesson7"></a>
+				<p class="lesson__heading lesson__heading_margin">Урок 7:</p>
+			</div><!--// end lesson 7-->			
+			<div class="lesson lesson_evenlesson-color lesson_padding lesson_margin lesson_other-design-elements">
+				<a class="bookmark" name="lesson8"></a>
+				<p class="lesson__heading lesson__heading_margin">Урок 8: Подробнее об объектах</p><a class="bookmark" name="Chapter1Lesson8"></a>
+					<div class="chapter"><!-- chapter 1 lesson 8-->						
+						<p class="chapter__heading chapter__heading_decor chapter__heading_margin">1.Некоторые новые возможности синтаксиса</p>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">	
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Более краткая запись методов в описании объектов</h3>						
+								В <a href="#Chapter11Lesson3"><span class="wrapper__text wrapper__text_underline wrapper__text_color-blue">уроке 3 главе 11</span></a>
+								были кратко рассмотрены как можно создавать объекты. Вспомним как записывался объект <span class="wrapper__text wrapper__text_bold">person</span>:
+						</div>
+						<div class="code code_color wrapper__text_indents-mb3">	
+							<p class="code code_indents-ml10">const person = {</p>
+							<p class="code code_indents-ml30">firstName:'Egor',</p>
+							<p class="code code_indents-ml30">lastName: 'Shulga',</p>
+							<p class="code code_indents-ml30">yearBirth: 1980,</p>
+							<p class="code code_indents-ml30">hasWife: true</p>
+							<p class="code code_indents-ml30">languages: ['ru','en'],</p>
+							<p class="code code_indents-ml30">greet: function(){</p>
+							<p class="code code_indents-ml40">alert('Greet!!!')</p>
+							<p class="code code_indents-ml20">}</p>
+							<p class="code code_indents-ml10">}</p>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							В новых версиях языка <span class="wrapper__text wrapper__text_color-blue">JavaScript</span>
+							можно записывать фрагмент с методом <span class="code code_color wrapper__text_bold">greet</span> 
+							следующим образом:
+						</div>
+						<div class="code code_color wrapper__text_indents-mb3">	
+							<p class="code code_indents-ml10">const person = {</p>
+							<p class="code code_indents-ml40">...</p>								
+							<p class="code code_indents-ml30"><span class="wrapper__text wrapper__text_bold">greet()</span>{</p>
+							<p class="code code_indents-ml40">alert('Greet!!!')</p>
+							<p class="code code_indents-ml20">}</p>
+							<p class="code code_indents-ml10">}</p>
+						</div>
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">"Составные ключи" объектов</h3>												
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							Также можно в качестве <span class="wrapper__text wrapper__text_i">ключей объекта</span> могут выступать <span class="wrapper__text wrapper__text_bold">строки</span>:
+							<p class="code code_color code_indents-ml10">'complex key': 'complex value'</p>
+							<p class="code code_color-comments code_indents-ml10">//ниже описано обращение к таким полям</p>
+							<p class="code code_color code_indents-ml10">console.log(person['complex key'])</p>
+						</div>
+						<p class="wrapper__text wrapper__text_bold wrapper__text_indents-mb3">Пример</p>
+						<div class="wrapper__text wrapper__text_indents-mb10">
+							<p class="wrapper__text wrapper__text_indents-mb3">Пусть задан объект <span class="wrapper__text wrapper__text_bold">complex</span> с одним полем:</p>
+							<p class="code code_color code_indents-ml10">const complex = {</p>
+							<p class="code code_color code_indents-ml30">'complex key': 'complex value'</p>
+							<p class="code code_color code_indents-ml10">}</p>
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb10">																
+							<input type="button" id="btnShowComplexKeyObjectLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести на экран объект complex">
+							<input type="button" id="btnClearFieldOutComplexKeyObjectLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Очистить поле вывода">
+							<span class="wrapper__text wrapper__text_bold">Результат:</span>
+							<span id="txtOutShowComplexKeyObjectLess8Ch1" class="wrapper__text"></span>
+						</div>
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">"Вычисляемые ключи" объектов</h3>						
+						<div class="wrapper__text wrapper__text_indents-mb5">
+							<p class="wrapper__text wrapper__text_indents-mb3">В качестве <span class="wrapper__text wrapper__text_i">ключей объекта</span> могут выступать различные <span class="wrapper__text wrapper__text_bold">вычисляемые выражения</span>,
+							который нужно помещать в <span class="wrapper__text wrapper__text_bold">[ ]</span>:</p>
+							<p class="code code_color code_indents-ml10">let iValue = <input type="text" id="txtiValueLess8Ch1" class="chapter__input-text chapter__input-text_w25" maxlength="25"  placeholder="Введите значение переменной" value="10">
+     							let jValue = <input type="text" id="txtjValueLess8Ch1" class="chapter__input-text chapter__input-text_w25" maxlength="25"  placeholder="Введите значение переменной" value="50">
+							</p>
+							<p class="code code_color code_indents-ml10">const calcExpr = {</p>
+							<p class="code code_color code_indents-ml30">[Date.now()]: 'Now date '+ Date.now()</p>
+							<p class="code code_color code_indents-ml30">[iValue + jValue]:'polynomial = ' + iValue*100 + jValue*100</p>
+							<p class="code code_color code_indents-ml30">['key_' + (1+4)]:'Calculated key = ' + 'key_' + (1+4)</p>
+							<p class="code code_color code_indents-ml10">}</p>
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb5">
+							Выберите какое поле объекта <span class="wrapper__text wrapper__text_bold">calcExpr</span> вы хотите вывести на экран:
+							<span class="code code_color">
+								<select id="selSelectPropObjCalcExpLess8Ch1" class="chapter__select code code_color">
+									<option value="[Date.now()]" class="code code_color">[Date.now()]</option>
+									<option value="[iValue + jValue]" class="code code_color">[iValue + jValue]</option>
+									<option value="['key_' + (1+4)]" class="code code_color">['key_' + (1+4)]</option>
+								</select>
+							</span>
+							<span class="wrapper__text wrapper__text_inline-block wrapper__text_indents-mb5">
+								<input type="button" id="btnShowCalcExprObjectLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести на экран объект complex">
+								<span class="wrapper__text wrapper__text_bold">Результат:</span>
+								<span id="txtOutShowCalcExprObjectLess8Ch1" class="wrapper__text"></span>
+							</span>
+							<p><input type="button" id="btnClearFieldOutCalcExprObjectLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Очистить поле вывода"></p>
+						</div>
+						<div class="separator"></div>
+						<h3 class="chapter__header-h3 chapter__header-h3_underline">Удаление ключей у объектов</h3>																		
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							Допустим хотим удалить ключ <span class="code code_color wrapper__text_bold">'key_5'</span> у объекта
+							<span class="code code_color wrapper__text_bold">calcExpr</span>, который описан выше 
+							<span class="wrapper__text wrapper__text_fontsize-17">&#11014;</span>. Вначале, можно подумать,
+							что удалить ключ можно присвоив ему значение <span class="code code_color wrapper__text_bold	">undefined</span>:
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<p><span class="code code_color code_indents-ml10">calcExpr['key_5'] = undefined</span></p>							
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<p><span class="wrapper__text">Но если глянуть структуру объекта, 
+							 то мы увидим что сам ключ остался и теперь имеет значение <span class="code code_color wrapper__text_bold">undefined</span> :</span>
+							</p>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb10">
+							<input type="button" id="btnDeleteKeyFromCalExprLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Присвоили свойству с ключом 'key_5' значение undefined">
+							<input type="button" id="btnShowCalcExprBeforeAndAfterDelLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вывести на экран объект calcExpr">
+							<input type="button" id="btnClearFieldOutStructureCalcExprLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr" value="Очистить поле вывода">
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3 wrapper__text_indents-p5 wrapper__text_h64 wrapper__text_w380 wrapper__text_border-1dot-9e9a9a">
+							<span id="txtOutShowCalcExprBeforeAndAfterDelLess8Ch1" class="wrapper__text"></span>
+						</div>
+						<div class="separator"></div><div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb5">
+							<input disabled type="button" id="btnDeleteRealKeyFromCalExprLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Удалить ключ 'key_5' по насттоящему">
+							<input type="button" id="btnReturnPropToCalExprLess8Ch1" class="chapter__input-btn chapter__input-btn_hover chapter__input-btn_padding chapter__input-btn_mr chapter__input-btn_ml" value="Вернуть удаленный ключ обратно в объект calcExpr">
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<span class="wrapper__text_bold">Хочется отметить</span>, что к свойствам объекта можно применять <span class="wrapper__text_i wrapper__text_color-bluedark">унарные операции</span>, например:
+							<p class="code code_color code_indents-ml10">const personAge = {</p>
+							<p class="code code_color code_indents-ml30">Age:40</p>
+							<p class="code code_color code_indents-ml10">}</p>
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							Если мы выполним <span class="code code_color code_indents-mr5">++personAge.Age</span>, то получим
+							<span id="txtOutExampleSomeFeatureObjLess8Ch1" class="code code_color code_indents-ml5"></span>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<span class="wrapper__text_bold">Также есть возможность</span> применять к свойствам объекта методы массивов, например <span class="code code_color wrapper__text_bold">push</span>:
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3">	
+							<span class="code code_color code_indents-ml10"> person.languages.push('kz')</span>
+						</div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							В итоге получим <span id="txtOutExampleChangeAndAddPropObjLess8Ch1" class="code code_color code_indents-ml5"></span>
+						</div>
+						<div class="separator"></div>
+						<div class="wrapper__text wrapper__text_indents-mb3">
+							<span class="wrapper__text_bold">И напоследок</span>, можно конечно к свойствам объекта и так обращаться
+							<span class="code wrapper__text_bold code_color">calcExpr.key_5</span>, но грамотнее будет так:<span class="code wrapper__text_bold wrapper__text_underline code_color"> calcExpr['key_5']</span>
+						</div>																													
+					</div><!--//end chapter 1 lesson 8-->	
+			</div><!--// end lesson 8-->												
+		</div><!--// end lessons -->
+	</div><!--// end wrapper -->	
+
+<script  type="text/javascript" src='js/script.js'></script>
+</body>
+</html>
+
+
+

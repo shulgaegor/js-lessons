@@ -1,0 +1,76 @@
+Замечание:
+в документации по gulp-autoprefixer option советуют не использовать ключ overrideBrowserList в:
+pipe(autoprefixer({
+  	  overrideBrowserList:["last 5 version"], 
+	  cascade:true 
+	})) 
+
+хорошей практикой считается использование ключа browserslist в файле package.json:
+***
+"gulp-autoprefixer": "^7.0.1",
+"browserslist": ["last 5 version","> 1%","IE 10"],
+***
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+
+****
+Я для этого сделал примесь:
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('/fonts/@{urlName}/@{urlName}.eot');
+  src: url('/fonts/@{urlName}/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('/fonts/@{urlName}/@{urlName}.woff') format('woff'),
+    url('/fonts/@{urlName}/@{urlName}.ttf') format('truetype'),
+    url('/fonts/@{urlName}/@{urlName}.svg') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}
+
+Потом вызываю её:
+@font-face {
+  .font(@fontRegular);
+}
+@font-face {
+  .font(@fontRegular; @fontBold; bold);
+}
+
+****
+
+Обычный CSS, нужен шрифт в форматах woff2, woff.
+Ну и стандартно: назвать, определить насыщенность, определить пути...
+
+@font-face {
+font-family: 'Roboto Condensed';
+src: url('../fonts/Robotocondensed.woff2') format('woff2'), url('../fonts/Robotocondensed.woff') format('woff'), url('../fonts/Robotocondensed.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+Предварительно задав переменные с необходимыми шрифтами:
+@fontRegular: 'OpenSans';
+@fontBold: '@{fontRegular}-Bold';
+
+На выходе получаю готовый CSS =)
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans/OpenSans.eot');
+  src: url('/fonts/OpenSans/OpenSans.eot#iefix') format('embedded-opentype'), 
+  url('/fonts/OpenSans/OpenSans.woff') format('woff'), 
+  url('/fonts/OpenSans/OpenSans.ttf') format('truetype'), 
+  url('/fonts/OpenSans/OpenSans.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Bold/OpenSans-Bold.eot');
+  src: url('/fonts/OpenSans-Bold/OpenSans-Bold.eot#iefix') format('embedded-opentype'),
+   url('/fonts/OpenSans-Bold/OpenSans-Bold.woff') format('woff'), 
+  url('/fonts/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
+   url('/fonts/OpenSans-Bold/OpenSans-Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

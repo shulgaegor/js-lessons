@@ -1,0 +1,35 @@
+{
+  "name": "js-lessons",
+  "version": "1.0.0",
+  "description": "Javascript lessons for beginners. The basics.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shulgaegor/js-lessons.git"
+  },
+  "keywords": [
+    "js-lesson/basis"
+  ],
+  "author": "Egor Shulga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shulgaegor/js-lessons/issues"
+  },
+  "homepage": "https://github.com/shulgaegor/js-lessons#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^1.4.0"
+  }
+}

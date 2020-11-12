@@ -1,0 +1,469 @@
+@import "cleancss";
+@import "params";
+@import "mixins";
+//@import "fonts";
+
+/* styles for wrapper block, elements and modifier */
+.wrapper {
+	height: 100%;	
+	font-family: @wrapper__font-family;
+	& a, & a:focus,& a:active,& a:visited{color: black;
+	}
+	//elements text	
+	&__text{
+		//modifier text
+		&_color{
+			&-red{
+				color:#f00;
+			}
+			&-blue{
+				color:#00f;
+			}
+			&-bluedark{
+				color:#1b14a0;
+			}						
+		}
+		&_bold{
+			font-weight: 700;
+		}
+		&_i{
+			font-style: italic;
+		}
+		&_underline{
+			text-decoration: underline;
+		}
+		&_fontsize{
+			&-20{
+				font-size: 20px;
+			}
+			&-17{
+				font-size: 17px;
+			}			
+		}
+		&_inline-block{
+			display: inline-block;
+		}
+		&_block{
+			display: block;
+		}
+		&_indents{
+			&-mb3{
+				margin: 0 0 3px 0;
+			}
+			&-mb5{
+				margin: 0 0 5px 0;
+			}	
+			&-mb10{
+				margin: 0 0 10px 0;
+			}					
+			&-mr100{
+				margin: 0 100px 0 0;
+			}
+			&-mr10{
+				margin: 0 10px 0 0;
+			}	
+			&-ml20{
+				margin: 0 0 0 20px;
+			}	
+			&-ml40{
+				margin: 0 0 0 40px;
+			}
+			&-p5{
+				padding: 5px;
+			}				
+		}
+		&_redindents{
+			text-indent:16px;
+		}
+		&_h64{
+			height: 64px;
+		}
+		&_w380{
+			width: 380px;
+		}
+		&_border-1dot-9e9a9a{
+    		border: 1px dotted #9e9a9a;
+		}		
+	}
+}
+
+/* styles for header block */
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	border-bottom: @header-border;
+	&_bcgcolor{
+		background-color: @header_bcgcolor;
+	}
+	&_indents{
+		//1-margin, 2-padding
+		.header_indents(@header_margin,@header_padding);
+	}
+	&__heading{
+		&_decor {
+    		//1-font-weight, 2-font-size, 3-text-decoration:none, 4-text-align:center;
+    		.heading_decor(@header__heading_font-weight, @header__heading_font-size);
+		}
+		&_margin{
+			margin: @header__heading_margin;
+		}
+	}	
+}
+/* styles for nav-block block */
+.nav-block{
+	font-family: @nav-block-font-family;
+	margin: @nav-block-margin;
+	padding: @nav-block-padding;
+}
+/* styles for menu block and element */
+.menu {
+		display: flex;
+		justify-content:space-around;	
+	&__item{
+		display: inline-block;
+		border: @menu__item-border;
+		border-radius: @menu__item-border-radius; 
+		position: relative;
+	}
+	&__item{
+		&_hover:hover{
+			display: inline-block;
+			background-color: @menu__item_bck-color-hover;
+			transition: all .5s;
+		}
+		&_background-color{
+			background-color: @menu__item_background-color;		
+		}
+		&_padding{
+			padding:@menu__item_padding;
+		}
+	}
+	&__item_hover:hover &__submenu{
+		display: block;
+	}
+	&__submenu{
+		display: none;
+    	position: absolute;
+	}
+	&__subitem{
+		.styles_subitem_submenu(100%,none,@menu__item-border,@menu__item-border-radius,relative,3px,-7px);
+		&_hover:hover{
+			display: flex;
+			flex-direction: column;
+			transition: all .5s;
+			width: 100%;
+		}
+		&_background-color{
+			background-color: @menu__subitem_background-color;		
+		}	
+		&_background-color{
+			background-color: @menu__subitem_background-color;		
+		}
+		&_padding{
+			padding:@menu__subitem_padding;
+		}
+		&-block{
+			min-width: 100px;
+		}
+		&-block_hover:hover{
+			background-color:@menu__subitem-block_bkgcolor-hover;
+		}
+	}
+
+	ul& li&__item:last-child &__submenu li&__subitem{
+		//@width,@list-style,@border,@border-radius,@position:relative,@top:0,@left:0,@bottom:0,@right:0		
+		.styles_subitem_submenu(100%,none,@menu__item-border,@menu__item-border-radius,relative,3px,-360px)
+	}
+}
+/* каскадный способ описания стиля*/
+/*
+ ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem{
+		width: 100%;
+		list-style: none;
+		border: @menu__item-border;
+		border-radius: @menu__item-border-radius; 
+		position: relative;
+		top:3px;
+		left: -360px;	
+	}*/
+
+/* styles for lessons block and element */
+.lessons{
+	//не знаю, что правельнее здесь ставить:
+	//padding или margin - на вид вроде одинаково смотрятся;
+	line-height: @lessons-line-height;
+	&_padding{
+		padding: @lessons_padding;
+	}
+	& .lesson:nth-child(odd){
+		background-color: #fff;
+	}
+	& .lesson:nth-child(even){
+		background-color: #f3f6f6;
+	}	
+}
+
+/* styles for lesson block, element and modifier */
+.lesson{
+	//background-color: #fff;
+	&_margin{
+		margin: @lesson_margin;
+	}
+	&_padding{
+		padding: @lesson_padding;
+		} 
+	&_other-design-elements{
+		.lesson_other-design-elements(@lesson_border, @lesson_border-radius);
+	}
+	&__heading {
+		//1-font-weight, 3-font-size, 4-text-decoration, 5-text-align
+		.lesson__heading_style(@lesson__heading_font-weight,@lesson__heading_font-size, underline);
+		&_margin {
+			margin:@lesson__heading_margin;
+		}
+	}
+	& .chapter:nth-child(odd){
+		background-color: #c7e0e6;
+	}
+	&_evenlesson-color{
+		background-color: #f3f6f6;
+	}
+	&_oddlesson-color{
+		background-color: #fff;
+	}
+}
+
+//.lessons .lesson:nth-child(odd){background-color: #fff;}
+//.lessons .lesson:nth-child(even){background-color: #f3f6f6;}
+
+/* styles for chapter block and element */
+.chapter {
+	.chapter-install-indents(@chapter-padding, @chapter-margin);
+	&__heading{
+		&_decor{
+			//1-font-weight, 2-font-size, 3-text-decoration, 4-text-align
+			.heading_decor(@chapter__heading_font-weight, @chapter__heading_font-size, underline,left)		
+		}
+		&_margin{
+			margin: @chapter__heading_margin;
+		}
+	}
+	/*--- header styles---*/
+	&__header-h3{
+		font-size: 15px;
+		padding: 5px 0;
+		&_underline{
+			text-decoration: underline;
+			padding: 5px 0 7px 0;
+		}
+	}
+	/*--- header styles---*/
+	&__select{
+		border: 1px solid #777;
+		border-radius: 1px;
+		&_no-border{
+			border: 0;
+		}
+		&_indents-mr{
+			margin: 0 6px 0 0;
+		}
+	}
+	//elements input-text
+	&__input-text{
+		border: 1px solid #777;
+		border-radius: 1px;
+		.set_width_field(202px);
+		font-size: 14px;
+		//modifier input-text
+		&_w90{
+			width: 90px;
+		}
+		&_w114{
+			width: 114px;
+		}
+		&_w180{
+			width: 180px;
+		}
+		&_w45{
+			width: 45px;
+		}
+		&_w25{
+			width: 25px;
+		}
+	}
+	//elements input-btn
+	&__input-btn{
+		position: relative;
+		border: 1px solid #777;
+		border-radius: 1px;
+		background-color: #e8ecec;
+		box-shadow: 2px 2px 6px -1px;
+		//modifier input-btn
+		input:enabled &_hover:hover{
+			background-color: #d1cccc;
+			transition: all 0.5s;
+		}
+		&_padding{
+			padding: 2px 6px;	
+		}
+		&_mr{
+			margin-right: 6px;
+		}
+		&_ml{
+			margin-left: 6px;
+		}
+	}
+}
+
+/* service styles */
+.separator {
+	padding-bottom: 10px;
+}
+.bookmark{
+	display: block;//пришлось тэг <a> сделать блочным, чтобы избежать ломания верстки
+}
+.resultat{
+	display: block;
+	&_margin{
+		margin:0 0 5px 0;
+	}
+}
+
+/* styles for decoration code-text */
+.code{
+	font-family: @code--font-family;
+	&_color{
+		color: #157733;
+		&-blue{
+			color:#00f;
+		}
+		&-console{
+			color:#f25a22;
+		}
+		&-comments{
+			color:#708090;
+		}
+		&-lighten-gray-console{
+			color: lighten(hsl(210, 22%, 56%), 10%);		
+		}
+		&-index-console{
+			color:#ba11bd;
+		}
+		&-length-array-console{
+			color: lighten(hsl(315, 50%, 40%), 30%);
+		}
+	}
+	&_inline-block{
+		display: inline-block;
+		margin: 0 0 3px 0;
+	}
+	&_block{
+		display: block;
+		margin: 0 0 3px 0;
+	}
+	//отступы padding и matging
+	&_indents{
+		&-pl{
+			padding: 0 0 0 15px;
+			&-11px{
+				padding: 0 0 0 11px;
+			}
+		}
+		&-ml{
+			&5{
+      		margin: 0 0 0 5px;
+    		}			
+			&10{
+      		margin: 0 0 0 10px;
+    		}			
+			&20{
+      		margin: 0 0 0 20px;
+    		}
+    		&30{
+      		margin: 0 0 0 30px;
+    		}   
+    		&40{
+     	 		margin: 0 0 0 40px;
+    		}			
+		}
+		&-mr{
+			&5{
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+	&_redindents-console,
+	&_redindents-code{
+		text-indent:16px;
+	}	
+}
+
+/* styles of content block and element */
+.content{
+}
+/* styles for priority table of operators */
+.table-container {
+	max-width: 1349px;
+	padding: 10px 0 ;
+	/*margin: 0 auto;*/
+	margin-bottom: 20px;/*это правило имеет если таблица находится не в конце глаавы */
+	& .priority-table, & .boolean-table{
+		border-collapse: collapse;//убираем двойную рамку на стыках ячеек
+	}
+}
+.priority-table.table-responsive{
+	overflow-x: auto;
+}
+//таблица заимствована, поэтому кое-где остался 
+//каскадный стиль написания кода
+.priority-table, .boolean-table{
+	width: 100%;
+	& th {
+		text-align: center;
+		border: 1px solid #627196;
+	}	
+	& thead>tr{
+		background: #b7c5e6;
+	}
+	& thead>tr>th{
+		background: #b7c5e6;
+		padding: 5px;
+	}
+	& td{
+    	border: 1px solid #627196;
+    	padding: 5px;
+    	vertical-align: top;		
+	}
+	& td:hover{
+		background-color: #ebe6e6;
+		transition: all .3s;
+	}	
+}
+
+.table-width{
+	width: 100%;
+}
+/* styles for lists*/
+/* styles for listol-container */
+.listol-container {
+	padding: 0 23px;
+	&__item-content_margin-left{
+		margin-left: 30px;
+		&22{
+			margin-left: 22px;
+		}
+	}
+}
+/* styles for listol-container */
+.listul-container {
+	padding: 0 20px;
+	&__ipadding_left{
+		margin-left: 30px;
+		&22{
+			margin-left: 22px;
+		}
+	}
+}

@@ -1,0 +1,442 @@
+wrapper__input-btn wrapper__input-btn_hover wrapper__input-btn_padding wrapper__input-btn_mr
+wrapper__text wrapper__text_bold
+
+
+
+
+old styles:
+/* decoration style */
+.decorfont_i_b{
+	font-weight: 700;
+	font-style: italic;
+}
+.decorfont_b{
+	font-weight: 700;
+}
+.decorfont_n{
+	font-weight: 400;
+}
+.decorfont_i{
+	font-weight: 400;
+	font-style: italic;
+}
+
+
+ /*
+ /******* рабочий пример изменения состояния левой кнопки мыши ****/
+ //при нажатии и отжатии; элементы отбираются по id//
+  let timer = null
+    let btn2 = document.getElementById('test_id2')
+    btn2.addEventListener("mousedown", pushButton)
+    btn2.addEventListener("mouseup", upButton)
+function pushButton (){
+  clearTimeout(timer)
+  timer = setTimeout(function() { 
+    btn2.style.backgroundColor = 'green'
+    console.log('mousedown') 
+  }, 100);  
+}    
+function upButton () {
+  btn2.style.backgroundColor = 'red'
+  console.log('mouseup')
+  // Stop the timer
+  clearTimeout(timer);
+}
+////////////////////////////////////////////////////
+/*
+/******* рабочий пример изменения состояния левой кнопки мыши ****/
+//при нажатии и отжатии; элементы отбираются по class//
+/*test button*/
+  let timer = null
+  let btnList = document.querySelectorAll('.test')
+  for(let i=0; i<btnList.length;i++){ 
+    btnList[i].addEventListener('mousedown',function(){pushButton(btnList[i])})
+    btnList[i].addEventListener('mouseup',function(){upButton(btnList[i])})
+  }
+function upButton(p) {
+  p.style.backgroundColor = '#e8ecec'
+   p.style.padding = '2px 5px'
+  //console.log('mouseup')
+  // Stop the timer
+  clearTimeout(timer);
+}
+function pushButton(p){
+  clearTimeout(timer)
+  timer = setTimeout(function() { 
+    p.style.backgroundColor = '#cfcaca'
+    p.style.padding = '3px 4px 1px 6px'
+   // console.log('mousedown') 
+  }, 150);  
+}
+
+/*
+/******* еще один рабочий вариант изменения кнопки при нажатии левой кнопки мыши ****/
+//при нажатии и отжатии; элементы отбираются по class//
+  let timerTest = null
+  let btnList2 = document.querySelectorAll('.test')
+  for(let i=0; i<btnList2.length;i++){ 
+    btnList2[i].addEventListener('mousedown',function(){_pushButton(btnList2[i])})
+    btnList2[i].addEventListener('mouseup',function(){_upButton(btnList2[i])})
+  }
+function _upButton(p) {
+  p.style.backgroundColor = '#e8ecec'
+   p.style.padding = '2px 5px'
+   p.style.border = '1px solid #777'
+    p.style.top = '0'
+    p.style.right = '0'   
+  // Stop the timerTest
+  clearTimeout(timerTest);
+}
+function _pushButton(p){
+  clearTimeout(timerTest)
+  timerTest = setTimeout(function() { 
+    p.style.backgroundColor = '#cfcaca'
+    //p.style.padding = '3px 4px 1px 6px'
+    p.style.top = '1px'
+    p.style.right = '-1px'
+  }, 150);  
+}
+//html-код
+<span class="experement"><input type="button" id="test_id1" class="test" value="test_id1"></span><span>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Aperiam asperiores quos architecto dolor iure quia ex nulla corporis delectus, alias porro illum hic quam nesciunt sequi obcaecati excepturi sapiente saepe.</span><br/>
+							<input type="button" id="test_id2" class="test" value="test_id2">&nbsp<span>Просто текст</span>
+//css-код
+//test class
+.test{
+	position: relative;
+	border: 1px solid #777;
+	border-radius: 1px;
+	background-color: #e8ecec;
+	padding: 2px 5px;
+	box-shadow: 2px 2px 6px -1px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+.test:hover{
+	//padding: 3px 5px 1px 5px;
+		background-color: #d1cccc;
+		transition: all 0.5s;
+	}
+.experement{
+	position: relative;
+}
+-----------------------------------------------------		
+
+
+5.Приоритеты операторов
+6.Условные операторы
+Булева логика
+Понятие о функциях 
+Основное о массивах 
+Создание объектов с помощью оператора new
+
+10.Основное о циклах
+
+
+  if(n === carCycleForLess3Ch10.length){console.log("Вы достигли конца массива!")}
+    else {
+      n = n+1
+      console.log("=> n = " + n)
+    }
+
+    Во-вторых, в отличие от цикла while, цикл do завершается точкой с запятой.
+
+
+
+
+   for(var p of btnList){
+    //p.style.backgroundColor = 'green';
+    p.addEventListener('click',function(){    
+      console.log(p.style.backgroundColor = 'red'+" "+p.getAttribute('id'))
+      console.log(p)
+    })
+  }
+
+      btn2.addEventListener('click',function(){
+      btn2.style.backgroundColor = 'green'    
+      console.log(btn2.style.backgroundColor+' '+btn2.getAttribute('id'))
+      //console.log(p)
+    })
+
+    /*list[i].addEventListener('click',function(){    
+    console.log(this.value)
+  })*/
+
+
+    /*  btnList[i].addEventListener('onmousedown',function(){
+      btnList[i].style.backgroundColor = '#d1cccc'    
+      //console.log(btnList[i].style.backgroundColor+' '+btnList[i].getAttribute('id'))
+      alert('onmousedown')
+    })*/
+
+
+
+    ////////////////////
+    var obj = Object.create({x:1, y:2});
+
+    /**************************************************/
+
+  //modifier text
+  /*&__text_color-red{
+    color:#f00;
+  }
+  &__text_color-blue{
+    color:#00f;
+  }
+  &__text_bold{
+    font-weight: 700;
+  }
+  &__text_i{
+    font-style: italic;
+  }
+  &__text_inline-block{
+    display: inline-block;
+  }
+  &__text_block{
+    display: block;
+  } 
+  &__text_indents-mb3{
+    margin: 0 0 3px 0;
+  } 
+  &__text_indents-mr10{
+    margin: 0 10px 0 0;
+  }
+  &__text_indents-mr100{
+    margin: 0 100px 0 0;
+  } 
+      &__text_indents-ml20{
+    margin: 0 0 0 20px;
+  }
+  &__text_indents-ml40{
+    margin: 0 0 0 40px;
+  }   
+  */
+
+
+
+
+    /*&_color-red{
+      color:#f00;
+    }
+    &_color-blue{
+      color:#00f;
+    }*/
+
+      /*  &_fontsize-20{
+      font-size: 20px;
+    }
+    &_fontsize-17{
+      font-size: 17px;
+    } */  
+
+  /*  &_indents-mb3{
+      margin: 0 0 3px 0;
+    }
+    &_indents-mr100{
+      margin: 0 100px 0 0;
+    }
+    &_indents-mr10{
+      margin: 0 10px 0 0;
+    }*/
+  /*  &_indents-ml20{
+      margin: 0 0 0 20px;
+    }
+    &_indents-ml40{
+      margin: 0 0 0 40px;
+    }*/
+
+/* HOVER*/
+  /*&__item_hover:hover{
+    display: inline-block;
+    background-color: @menu__item_bck-color-hover;
+    transition: all .5s;
+  }*/
+
+/*  &__item_background-color{
+    background-color: @menu__item_background-color;   
+  }
+  &__item_padding{
+    padding:@menu__item_padding;
+  }*/
+
+  /*&__subitem_hover:hover{
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    width: 100%;
+  } */
+
+  /*&__heading_margin {
+    margin:@lesson__heading_margin;
+  }*/
+
+  /*&__header-h3_underline{
+    text-decoration: underline;
+    padding: 5px 0 7px 0;
+  } */
+
+
+  /*&__heading_decor{
+    //1-font-weight, 2-font-size, 3-text-decoration, 4-text-align
+    .heading_decor(@chapter__heading_font-weight, @chapter__heading_font-size, underline,left)    
+  }*/
+
+  /*&__heading_margin{
+    margin: @chapter__heading_margin;
+  } 
+  &__chapter-even_bckcolor{
+    background-color: #c7e0e6;
+  }*/
+
+
+  /*&__subitem-block_hover:hover{
+    background-color:@menu__subitem-block_bkgcolor-hover;
+  }*/
+
+
+  /*&__subitem_padding{
+    padding:@menu__subitem_padding;
+  }
+  &__subitem-block{
+    min-width: 100px;
+  }*/
+
+
+  /*&__subitem_background-color{
+    background-color: @menu__subitem_background-color;    
+  }*/
+
+    /*
+  &__heading_decor {
+      //1-font-weight, 2-font-size, 3-text-decoration:none, 4-text-align:center;
+      .heading_decor(@header__heading_font-weight, @header__heading_font-size);
+  }
+  &__heading_margin{
+    margin: @header__heading_margin;
+  }
+  */  
+
+
+  <div class="code code_redindents-console">
+  <span class="code code_color-index-console">0</span>
+  : "
+  <span class="code code_color-console">mazda</span>"</div>
+
+
+  /*  &__select_no-border{
+    border: 0;
+  } */
+
+    /*&__select_indents-mr{
+    margin: 0 6px 0 0;
+  }*/
+
+    /*&__input-text_w90{
+    width: 90px;
+  }*/
+
+    /*&__input-text_w114{
+    width: 114px;
+  }*/
+
+    &__input-text_w180{
+    width: 180px;
+  } 
+
+    &__input-text_w25{
+    width: 25px;
+  } 
+
+    &__input-text_w45{
+    width: 45px;
+  } 
+
+    /*&__input-btn_hover:hover{
+    background-color: #d1cccc;
+    transition: all 0.5s;
+  }*/
+  /*&__input-btn_padding{
+    padding: 2px 6px; 
+  } */
+
+  /*&__input-btn_mr{
+    margin-right: 6px;
+  }*/
+  &__input-btn_ml{
+    margin-left: 6px;
+  } 
+
+  /*  &_color-blue{
+    color:#00f;
+  }
+  &_color-console{
+    color:#f25a22;
+  } 
+  &_color-comments{
+    color:#708090;
+  }*/
+
+  /*
+  &_color-lighten-gray-console{
+    color: lighten(hsl(210, 22%, 56%), 10%);    
+  }
+  &_color-index-console{
+    color:#ba11bd;
+  }*/
+
+  /*  &_color-length-array-console{
+    color: lighten(hsl(315, 50%, 40%), 30%);
+  }*/
+
+  /*  &__item-content_margin-left22{
+    margin-left: 22px;
+  }*/
+
+    /*&__ipadding_left22{
+    margin-left: 22px;
+  }*/
+
+  ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem 
+
+
+
+  const person = {
+
+firstName:'Egor',       // firstName - поле объекта, хранит имя
+
+lastName: 'Shulga',     // lastName - поле объекта, хранит фамилию
+
+yearBirth: 1980,        // целочисленное значение
+
+hasWife: true,          // здесь поместили булево значение
+
+languages: ['ru','en'], // в этом поле объекта мы поместили массив
+
+greet: function(){      // а здесь будем хранить анонимную функцию, которую правильнее в данном контексте, назвать методом
+
+alert('Greet!!!')    // тело метода
+
+}
+
+}
+
+
+    /*&-20{
+      margin: 0 0 0 20px;
+    }
+    &-20{
+      margin: 0 0 0 30px;
+    }   
+    &-40{
+      margin: 0 0 0 40px;
+    }   */  
+
+
+
+const btnShowPersonLess3Ch11 = document.getElementById('btnShowPersonLess3Ch11')
+ btnShowPersonLess3Ch11.addEventListener('click', function() {
+  document.getElementById('textOutShowPersonLess3Ch11').innerHTML =""
+  const keys = Object.keys(person)
+  keys.forEach(function(key){
+    document.getElementById('textOutShowPersonLess3Ch11').innerHTML += '{key: '+ key + ' | ' + 'value: '+ person[key] +' }</br>'
+  })
+ })

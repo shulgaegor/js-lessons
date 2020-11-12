@@ -1,0 +1,51 @@
+/* header mixins */
+.header_indents(@margin,@padding){
+	margin: @margin;
+	padding: @padding;
+}
+
+/* lesson mixins */
+.lesson_other-design-elements(@border, @border-radius){
+	 border: @border;
+    border-radius: @border-radius;
+}
+.lesson__heading_style(@fw, @fz, @txt-decor:none, @text-align:center){
+	font-weight: @fw;
+	font-size: @fz;
+	text-decoration: @txt-decor;
+	text-align: @text-align;
+}
+/* chapter mixins */
+.chapter__text_note-param(@color, @fw:700){
+	color: @color;
+	font-weight: @fw;
+}
+.chapter-install-indents(@p, @m){
+	padding: @p;
+	margin: @m;
+}
+/* menu, submenu, item and subitem mixins */
+.styles_subitem_submenu(@width,@list-style,@border,@border-radius,@position:relative,@top:0,@left:0,@bottom:0,@right:0){
+	width: @width;
+	list-style: @list-style;
+	border: @border;
+	border-radius: @border-radius; 
+	position: @position;
+	top:@top;
+	left: @left;
+	bottom:@bottom;
+	right: @right;
+}
+
+/* dimensions mixins */
+.set_width_field(@w){
+	width: @w;
+}
+
+/* universal mixin - use chapter__heading and header__headin*/
+.heading_decor(@fw, @fz, @txt-decor:none, @text-align:center){
+	font-weight: @fw;
+	font-size: @fz;
+	text-decoration: @txt-decor;
+	text-align: @text-align;
+}

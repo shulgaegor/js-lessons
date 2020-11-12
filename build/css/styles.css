@@ -1,0 +1,539 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  /*по сути в данном случае*/
+  /*прописание вендорных префиксов*/
+  /*уже лишнее, так как они нужны были*/
+  /*для древних версий браузеров*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-size: 14px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/*ul li{list-style: none;}*/
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: normal;
+  text-align: -internal-center;
+}
+/* header mixins */
+/* lesson mixins */
+/* chapter mixins */
+/* menu, submenu, item and subitem mixins */
+/* dimensions mixins */
+/* universal mixin - use chapter__heading and header__headin*/
+/* styles for wrapper block, elements and modifier */
+.wrapper {
+  height: 100%;
+  font-family: arial, sans-serif;
+}
+.wrapper a,
+.wrapper a:focus,
+.wrapper a:active,
+.wrapper a:visited {
+  color: black;
+}
+.wrapper__text_color-red {
+  color: #f00;
+}
+.wrapper__text_color-blue {
+  color: #00f;
+}
+.wrapper__text_color-bluedark {
+  color: #1b14a0;
+}
+.wrapper__text_bold {
+  font-weight: 700;
+}
+.wrapper__text_i {
+  font-style: italic;
+}
+.wrapper__text_underline {
+  text-decoration: underline;
+}
+.wrapper__text_fontsize-20 {
+  font-size: 20px;
+}
+.wrapper__text_fontsize-17 {
+  font-size: 17px;
+}
+.wrapper__text_inline-block {
+  display: inline-block;
+}
+.wrapper__text_block {
+  display: block;
+}
+.wrapper__text_indents-mb3 {
+  margin: 0 0 3px 0;
+}
+.wrapper__text_indents-mb5 {
+  margin: 0 0 5px 0;
+}
+.wrapper__text_indents-mb10 {
+  margin: 0 0 10px 0;
+}
+.wrapper__text_indents-mr100 {
+  margin: 0 100px 0 0;
+}
+.wrapper__text_indents-mr10 {
+  margin: 0 10px 0 0;
+}
+.wrapper__text_indents-ml20 {
+  margin: 0 0 0 20px;
+}
+.wrapper__text_indents-ml40 {
+  margin: 0 0 0 40px;
+}
+.wrapper__text_indents-p5 {
+  padding: 5px;
+}
+.wrapper__text_redindents {
+  text-indent: 16px;
+}
+.wrapper__text_h64 {
+  height: 64px;
+}
+.wrapper__text_w380 {
+  width: 380px;
+}
+.wrapper__text_border-1dot-9e9a9a {
+  border: 1px dotted #9e9a9a;
+}
+/* styles for header block */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  border-bottom: 1px dashed #8f8f8f;
+}
+.header_bcgcolor {
+  background-color: #b7c5e6;
+}
+.header_indents {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+.header__heading_decor {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.header__heading_margin {
+  margin: 0 0 15px 0;
+}
+/* styles for nav-block block */
+.nav-block {
+  font-family: monospace, sans-serif;
+  margin: 0 0 25px 0;
+  padding: 0 0 0 0;
+}
+/* styles for menu block and element */
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+.menu__item {
+  display: inline-block;
+  border: 1px solid #9c9999;
+  border-radius: 2px;
+  position: relative;
+}
+.menu__item_hover:hover {
+  display: inline-block;
+  background-color: #ccc;
+  transition: all 0.5s;
+}
+.menu__item_background-color {
+  background-color: #f5f5ee;
+}
+.menu__item_padding {
+  padding: 2px 7px;
+}
+.menu__item_hover:hover .menu__submenu {
+  display: block;
+}
+.menu__submenu {
+  display: none;
+  position: absolute;
+}
+.menu__subitem {
+  width: 100%;
+  list-style: none;
+  border: 1px solid #9c9999;
+  border-radius: 2px;
+  position: relative;
+  top: 3px;
+  left: -7px;
+  bottom: 0;
+  right: 0;
+}
+.menu__subitem_hover:hover {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  width: 100%;
+}
+.menu__subitem_background-color {
+  background-color: #f5f5ee;
+}
+.menu__subitem_background-color {
+  background-color: #f5f5ee;
+}
+.menu__subitem_padding {
+  padding: 3px 7px;
+}
+.menu__subitem-block {
+  min-width: 100px;
+}
+.menu__subitem-block_hover:hover {
+  background-color: #cadced;
+}
+ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem {
+  width: 100%;
+  list-style: none;
+  border: 1px solid #9c9999;
+  border-radius: 2px;
+  position: relative;
+  top: 3px;
+  left: -360px;
+  bottom: 0;
+  right: 0;
+}
+/* каскадный способ описания стиля*/
+/*
+ ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem{
+		width: 100%;
+		list-style: none;
+		border: @menu__item-border;
+		border-radius: @menu__item-border-radius; 
+		position: relative;
+		top:3px;
+		left: -360px;	
+	}*/
+/* styles for lessons block and element */
+.lessons {
+  line-height: 1.2;
+}
+.lessons_padding {
+  padding: 120px 0 0 0;
+}
+.lessons .lesson:nth-child(odd) {
+  background-color: #fff;
+}
+.lessons .lesson:nth-child(even) {
+  background-color: #f3f6f6;
+}
+/* styles for lesson block, element and modifier */
+.lesson_margin {
+  margin: 0 20px 10px 20px;
+}
+.lesson_padding {
+  padding: 15px 5px 0 5px;
+}
+.lesson_other-design-elements {
+  border: 1px dashed #ece2e2;
+  border-radius: 5px 5px 0 0;
+}
+.lesson__heading {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
+}
+.lesson__heading_margin {
+  margin: 0 0 20px 0;
+}
+.lesson .chapter:nth-child(odd) {
+  background-color: #c7e0e6;
+}
+.lesson_evenlesson-color {
+  background-color: #f3f6f6;
+}
+.lesson_oddlesson-color {
+  background-color: #fff;
+}
+/* styles for chapter block and element */
+.chapter {
+  padding: 5px 0 10px 7px;
+  margin: 0 0 15px 0;
+  /*--- header styles---*/
+  /*--- header styles---*/
+}
+.chapter__heading_decor {
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: underline;
+  text-align: left;
+}
+.chapter__heading_margin {
+  margin: 0 0 20px 0;
+}
+.chapter__header-h3 {
+  font-size: 15px;
+  padding: 5px 0;
+}
+.chapter__header-h3_underline {
+  text-decoration: underline;
+  padding: 5px 0 7px 0;
+}
+.chapter__select {
+  border: 1px solid #777;
+  border-radius: 1px;
+}
+.chapter__select_no-border {
+  border: 0;
+}
+.chapter__select_indents-mr {
+  margin: 0 6px 0 0;
+}
+.chapter__input-text {
+  border: 1px solid #777;
+  border-radius: 1px;
+  width: 202px;
+  font-size: 14px;
+}
+.chapter__input-text_w90 {
+  width: 90px;
+}
+.chapter__input-text_w114 {
+  width: 114px;
+}
+.chapter__input-text_w180 {
+  width: 180px;
+}
+.chapter__input-text_w45 {
+  width: 45px;
+}
+.chapter__input-text_w25 {
+  width: 25px;
+}
+.chapter__input-btn {
+  position: relative;
+  border: 1px solid #777;
+  border-radius: 1px;
+  background-color: #e8ecec;
+  box-shadow: 2px 2px 6px -1px;
+}
+input:enabled .chapter__input-btn_hover:hover {
+  background-color: #d1cccc;
+  transition: all 0.5s;
+}
+.chapter__input-btn_padding {
+  padding: 2px 6px;
+}
+.chapter__input-btn_mr {
+  margin-right: 6px;
+}
+.chapter__input-btn_ml {
+  margin-left: 6px;
+}
+/* service styles */
+.separator {
+  padding-bottom: 10px;
+}
+.bookmark {
+  display: block;
+}
+.resultat {
+  display: block;
+}
+.resultat_margin {
+  margin: 0 0 5px 0;
+}
+/* styles for decoration code-text */
+.code {
+  font-family: monospace, sans-serif;
+}
+.code_color {
+  color: #157733;
+}
+.code_color-blue {
+  color: #00f;
+}
+.code_color-console {
+  color: #f25a22;
+}
+.code_color-comments {
+  color: #708090;
+}
+.code_color-lighten-gray-console {
+  color: hsl(210, 22%, 66%);
+}
+.code_color-index-console {
+  color: #ba11bd;
+}
+.code_color-length-array-console {
+  color: hsl(315, 50%, 70%);
+}
+.code_inline-block {
+  display: inline-block;
+  margin: 0 0 3px 0;
+}
+.code_block {
+  display: block;
+  margin: 0 0 3px 0;
+}
+.code_indents-pl {
+  padding: 0 0 0 15px;
+}
+.code_indents-pl-11px {
+  padding: 0 0 0 11px;
+}
+.code_indents-ml5 {
+  margin: 0 0 0 5px;
+}
+.code_indents-ml10 {
+  margin: 0 0 0 10px;
+}
+.code_indents-ml20 {
+  margin: 0 0 0 20px;
+}
+.code_indents-ml30 {
+  margin: 0 0 0 30px;
+}
+.code_indents-ml40 {
+  margin: 0 0 0 40px;
+}
+.code_indents-mr5 {
+  margin: 0 5px 0 0;
+}
+.code_redindents-console,
+.code_redindents-code {
+  text-indent: 16px;
+}
+/* styles of content block and element */
+/* styles for priority table of operators */
+.table-container {
+  max-width: 1349px;
+  padding: 10px 0 ;
+  /*margin: 0 auto;*/
+  margin-bottom: 20px;
+  /*это правило имеет если таблица находится не в конце глаавы */
+}
+.table-container .priority-table,
+.table-container .boolean-table {
+  border-collapse: collapse;
+}
+.priority-table.table-responsive {
+  overflow-x: auto;
+}
+.priority-table,
+.boolean-table {
+  width: 100%;
+}
+.priority-table th,
+.boolean-table th {
+  text-align: center;
+  border: 1px solid #627196;
+}
+.priority-table thead > tr,
+.boolean-table thead > tr {
+  background: #b7c5e6;
+}
+.priority-table thead > tr > th,
+.boolean-table thead > tr > th {
+  background: #b7c5e6;
+  padding: 5px;
+}
+.priority-table td,
+.boolean-table td {
+  border: 1px solid #627196;
+  padding: 5px;
+  vertical-align: top;
+}
+.priority-table td:hover,
+.boolean-table td:hover {
+  background-color: #ebe6e6;
+  transition: all 0.3s;
+}
+.table-width {
+  width: 100%;
+}
+/* styles for lists*/
+/* styles for listol-container */
+.listol-container {
+  padding: 0 23px;
+}
+.listol-container__item-content_margin-left {
+  margin-left: 30px;
+}
+.listol-container__item-content_margin-left22 {
+  margin-left: 22px;
+}
+/* styles for listol-container */
+.listul-container {
+  padding: 0 20px;
+}
+.listul-container__ipadding_left {
+  margin-left: 30px;
+}
+.listul-container__ipadding_left22 {
+  margin-left: 22px;
+}
