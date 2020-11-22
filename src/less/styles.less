@@ -2,20 +2,48 @@
 @import "params";
 @import "mixins";
 //@import "fonts";
-
+/*
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 30px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+h3 {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+h4 {
+	font-size: 20px;
+	margin: 0px 0px 15px 0px;
+}
+h5 {
+	font-size: 16px;
+	margin: 0px 0px 10px 0px;
+}
+*/
 /* styles for wrapper block, elements and modifier */
 .wrapper {
-	height: 100%;	
+	height: 100%;
+	min-width: 500px;
+	margin: 0 auto;	
 	font-family: @wrapper__font-family;
 	& a, & a:focus,& a:active,& a:visited{color: black;
 	}
 	//elements text	
 	&__text{
+		max-width: 100%;
+		line-height: 1.3;
 		//modifier text
 		&_color{
 			&-red{
 				color:#f00;
 			}
+			&-reddark{
+				color:darken(hsl(0, 60%, 35%), 1);
+			}			
 			&-blue{
 				color:#00f;
 			}
@@ -23,13 +51,13 @@
 				color:#1b14a0;
 			}						
 		}
-		&_bold{
+		&_b{
 			font-weight: 700;
 		}
 		&_i{
 			font-style: italic;
 		}
-		&_underline{
+		&_u{
 			text-decoration: underline;
 		}
 		&_fontsize{
@@ -43,9 +71,15 @@
 		&_inline-block{
 			display: inline-block;
 		}
+		&_inline{
+			display: inline-block;
+		}
 		&_block{
 			display: block;
 		}
+		&_redline-text{
+			text-indent: 16px;
+		}			
 		&_indents{
 			&-mb3{
 				margin: 0 0 3px 0;
@@ -59,9 +93,15 @@
 			&-mr100{
 				margin: 0 100px 0 0;
 			}
+			&-mr5{
+				margin: 0 10px 0 0;
+			}			
 			&-mr10{
 				margin: 0 10px 0 0;
 			}	
+			&-ml5{
+				margin: 0 0 0 5px;
+			}
 			&-ml20{
 				margin: 0 0 0 20px;
 			}	
@@ -70,20 +110,44 @@
 			}
 			&-p5{
 				padding: 5px;
-			}				
+			}	
+			&-p15{
+				padding: 15px;
+			}							
 		}
-		&_redindents{
+		&_redline{
 			text-indent:16px;
+		}
+		&_h-auto{
+			height: auto;
 		}
 		&_h64{
 			height: 64px;
 		}
+		&_h110{
+			height: 110px;
+		}		
 		&_w380{
 			width: 380px;
 		}
+		&_w-auto-maxcontent{
+			width: auto;
+    		max-width: max-content;
+		}
+		&_w650{
+      	max-width: 650px;//было просто width
+    	}		
 		&_border-1dot-9e9a9a{
-    		border: 1px dotted #9e9a9a;
-		}		
+    		/*border: 1px dotted #9e9a9a;
+    		border-radius: 3px;*/
+    		.frame_for_content(1px,dotted, #9e9a9a, 3px);
+		}
+    	&_border-1dash-144154{
+        /*border: 1px dashed #144154;
+        border-radius: 3px;*/
+        .frame_for_content(1px,dashed, #144154, 3px);
+    	} 			
+
 	}
 }
 
@@ -236,9 +300,6 @@
 	}
 }
 
-//.lessons .lesson:nth-child(odd){background-color: #fff;}
-//.lessons .lesson:nth-child(even){background-color: #f3f6f6;}
-
 /* styles for chapter block and element */
 .chapter {
 	.chapter-install-indents(@chapter-padding, @chapter-margin);
@@ -255,7 +316,7 @@
 	&__header-h3{
 		font-size: 15px;
 		padding: 5px 0;
-		&_underline{
+		&_u{
 			text-decoration: underline;
 			padding: 5px 0 7px 0;
 		}
@@ -331,17 +392,22 @@
 		margin:0 0 5px 0;
 	}
 }
-
+.custom-fontsize-14{
+	font-size: 14px;
+}
 /* styles for decoration code-text */
 .code{
 	font-family: @code--font-family;
 	&_color{
 		color: #157733;
+		&-red{
+			color:#f00;
+		}		
 		&-blue{
 			color:#00f;
 		}
 		&-console{
-			color:#f25a22;
+			color:#de476b;//f25a22;
 		}
 		&-comments{
 			color:#708090;
@@ -372,6 +438,14 @@
 				padding: 0 0 0 11px;
 			}
 		}
+		&-mb{			
+			&3{
+				margin: 0 0 3px 0;
+			}
+			&5{
+				margin: 0 0 5px 0;
+			}
+		}		
 		&-ml{
 			&5{
       		margin: 0 0 0 5px;
@@ -395,8 +469,8 @@
 			}
 		}
 	}
-	&_redindents-console,
-	&_redindents-code{
+	&_redline-console,
+	&_redline-code{
 		text-indent:16px;
 	}	
 }

@@ -440,3 +440,32 @@ const btnShowPersonLess3Ch11 = document.getElementById('btnShowPersonLess3Ch11')
     document.getElementById('textOutShowPersonLess3Ch11').innerHTML += '{key: '+ key + ' | ' + 'value: '+ person[key] +' }</br>'
   })
  })
+
+
+    &_w650{
+      width: 650px;
+    }
+    &_border-1sol-144154{
+        border: 1px solid #144154;
+    } 
+
+
+
+    const old_obj = {
+        k1: '111',
+        k2: '222',
+        k3: '333'
+    };
+console.log(old_obj)
+
+
+// destructuring, with renaming. The variable rest will hold those values not assigned to kA, kB, or kC.
+    const {
+        k1: kA, 
+        k2: kB, 
+        k3: kC,
+        ...rest
+    } = old_obj;
+
+const newObj = {kA, kB, kC, ...rest};
+console.log(newObj)    

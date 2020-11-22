@@ -591,8 +591,56 @@ console.log(person.`${greet}`())*/
   document.getElementById('textOutShowPersonLess3Ch11').innerHTML =""
   delete person.isProgrammer
  })
+
+
+//******** lesson 4 *********//
+/*--------------------  chapter 1 lesson 4  ------------------------*/
+const pow = 10e3
+document.getElementById('textOutExamplePowLess4Ch1').innerHTML = pow
+//console.log(Number.MAX_SAFE_INTEGER + 3)
+
+//Operation with MAX_SAFE_INTEGER
+const selResultSumNumAndMSILess4Ch1 = document.getElementById('selResultSumNumAndMSILess4Ch1')
+selResultSumNumAndMSILess4Ch1.addEventListener('change', function() {
+  let indexselResultSumNumAndMSILess4Ch1 = document.getElementById('selResultSumNumAndMSILess4Ch1').options.selectedIndex
+  let strValselResultSumNumAndMSILess4Ch1 = document.getElementById('selResultSumNumAndMSILess4Ch1').options[indexselResultSumNumAndMSILess4Ch1].value
+  document.getElementById('textOutResultSumNumAndMSILess4Ch1').innerHTML = ''
+  document.getElementById('textOutResultSumNumAndMSILess4Ch1').innerHTML =  Number.MAX_SAFE_INTEGER + Number.parseInt(strValselResultSumNumAndMSILess4Ch1)
+ })
+//another constant MAX_SAFE_INTEGER entry 
+const maxint = Math.pow(2,53)-1
+document.getElementById('textOutFormulaMSILess4Ch1').innerHTML = maxint
+
+//Example constant MIN_SAFE_INTEGER entry 
+document.getElementById('textOutFormulaMinSILess4Ch1').innerHTML = Number.MIN_SAFE_INTEGER
+//Example constant MIN_VALUE and MAX_VALUE
+document.getElementById('textOutMaxValueIntLess4Ch1').innerHTML = Number.MAX_VALUE
+document.getElementById('textOutMinValueIntLess4Ch1').innerHTML = Number.MIN_VALUE
+//Example constant POSITIVE_INFINITY and NEGATIVE_INFINITY
+document.getElementById('textOutPosInfLess4Ch1').innerHTML = Number.POSITIVE_INFINITY
+document.getElementById('textOutNegInfLess4Ch1').innerHTML = Number.NEGATIVE_INFINITY
+
+//An example of how to get positive infinity
+document.getElementById('textOutResPosInfLess4Ch1').innerHTML = 1/0
+//An example of how to get negative infinity
+document.getElementById('textOutResNegInfLess4Ch1').innerHTML = -1/0
+//infinity check
+const selResultExpressionLess4Ch1 = document.getElementById('selResultExpressionLess4Ch1')
+selResultExpressionLess4Ch1.addEventListener('change', function() {
+  let indexselResultExpressionLess4Ch1 = document.getElementById('selResultExpressionLess4Ch1').options.selectedIndex
+  let strValselResultExpressionLess4Ch1 = document.getElementById('selResultExpressionLess4Ch1').options[indexselResultExpressionLess4Ch1].value
+  document.getElementById('textOutResExpressionLess4Ch1').innerHTML = ''
+  document.getElementById('textOutResExpressionLess4Ch1').innerHTML =  Number.isFinite(Number.parseInt(strValselResultExpressionLess4Ch1))
+ })
+
+//Example Nan
+//console.log(0/0)
+
+
+
 //******** lesson 8 *********//
-//feature new syntax for objects - lesson 8 chapter 1
+/*--------------------  chapter 1 lesson 8  ------------------------*/
+//feature new syntax for objects
 const complex = {
   'complex key':'complex value'
 }
@@ -697,6 +745,42 @@ document.getElementById('txtOutExampleSomeFeatureObjLess8Ch1').innerHTML = ++per
 person.languages.push('kz')
 document.getElementById('txtOutExampleChangeAndAddPropObjLess8Ch1').innerHTML = "person['languages'] = " + person['languages']
 //console.log(calcExpr.key_5)
+
+/*--------------------  chapter2 lesson8  ------------------------*/
+const newPerson = {
+  name: 'Egor',
+  age: 40,
+  isProrrammer: true,
+  languages: ['ru','en'],
+  greet(){ /* use new syntax */
+    alert('Greet!!!')
+  }
+}
+//variant use Destructuring object and rename variable
+const{name,age:fieldAge,languages,...rest} = newPerson
+const newObj = {name, fieldAge, languages, ...rest};
+//console.log(newObj)
+
+const keys = Object.keys(newObj)
+keys.forEach(function(key){
+  let txtBoldFontKey= (key==="fieldAge")?('<span class="wrapper__text wrapper__text_bold">'+key+'</span>'):key
+  document.getElementById('txtOutShowDestructuringLess8Ch2').innerHTML += '{key: '+ txtBoldFontKey + ' | ' + 'value: '+ newObj[key] +' }</br>'
+})
+
+//variant use Destructuring object, rename variable and use default value
+const newPerson2 = {
+  firstName: 'Egor',
+  myAge: undefined,
+  isProrrammer: true
+}
+const{firstName,myAge:fAge=40,...rest2} = newPerson2
+const newObj2 = {firstName, fAge, ...rest2}
+//console.log(newObj2) 
+const keys2 = Object.keys(newObj2)
+keys2.forEach(function(key){
+  let txtBoldValue= (key==="fAge")?('<span class="wrapper__text wrapper__text_bold">'+newObj2[key]+'</span>'):newObj2[key]
+  document.getElementById('txtOutShowDestructuring2Less8Ch2').innerHTML += '{key: '+ key + ' | ' + 'value: '+ txtBoldValue +' }</br>'
+})
 
 
 });//end of programm

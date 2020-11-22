@@ -86,9 +86,33 @@ th {
 /* menu, submenu, item and subitem mixins */
 /* dimensions mixins */
 /* universal mixin - use chapter__heading and header__headin*/
+/*
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 30px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+h3 {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+h4 {
+	font-size: 20px;
+	margin: 0px 0px 15px 0px;
+}
+h5 {
+	font-size: 16px;
+	margin: 0px 0px 10px 0px;
+}
+*/
 /* styles for wrapper block, elements and modifier */
 .wrapper {
   height: 100%;
+  min-width: 500px;
+  margin: 0 auto;
   font-family: arial, sans-serif;
 }
 .wrapper a,
@@ -97,8 +121,15 @@ th {
 .wrapper a:visited {
   color: black;
 }
+.wrapper__text {
+  max-width: 100%;
+  line-height: 1.3;
+}
 .wrapper__text_color-red {
   color: #f00;
+}
+.wrapper__text_color-reddark {
+  color: hsl(0, 60%, 34%);
 }
 .wrapper__text_color-blue {
   color: #00f;
@@ -106,13 +137,13 @@ th {
 .wrapper__text_color-bluedark {
   color: #1b14a0;
 }
-.wrapper__text_bold {
+.wrapper__text_b {
   font-weight: 700;
 }
 .wrapper__text_i {
   font-style: italic;
 }
-.wrapper__text_underline {
+.wrapper__text_u {
   text-decoration: underline;
 }
 .wrapper__text_fontsize-20 {
@@ -124,8 +155,14 @@ th {
 .wrapper__text_inline-block {
   display: inline-block;
 }
+.wrapper__text_inline {
+  display: inline-block;
+}
 .wrapper__text_block {
   display: block;
+}
+.wrapper__text_redline-text {
+  text-indent: 16px;
 }
 .wrapper__text_indents-mb3 {
   margin: 0 0 3px 0;
@@ -139,8 +176,14 @@ th {
 .wrapper__text_indents-mr100 {
   margin: 0 100px 0 0;
 }
+.wrapper__text_indents-mr5 {
+  margin: 0 10px 0 0;
+}
 .wrapper__text_indents-mr10 {
   margin: 0 10px 0 0;
+}
+.wrapper__text_indents-ml5 {
+  margin: 0 0 0 5px;
 }
 .wrapper__text_indents-ml20 {
   margin: 0 0 0 20px;
@@ -151,17 +194,44 @@ th {
 .wrapper__text_indents-p5 {
   padding: 5px;
 }
-.wrapper__text_redindents {
+.wrapper__text_indents-p15 {
+  padding: 15px;
+}
+.wrapper__text_redline {
   text-indent: 16px;
+}
+.wrapper__text_h-auto {
+  height: auto;
 }
 .wrapper__text_h64 {
   height: 64px;
 }
+.wrapper__text_h110 {
+  height: 110px;
+}
 .wrapper__text_w380 {
   width: 380px;
 }
+.wrapper__text_w-auto-maxcontent {
+  width: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.wrapper__text_w650 {
+  max-width: 650px;
+}
 .wrapper__text_border-1dot-9e9a9a {
+  /*border: 1px dotted #9e9a9a;
+    		border-radius: 3px;*/
   border: 1px dotted #9e9a9a;
+  border-radius: 3px;
+}
+.wrapper__text_border-1dash-144154 {
+  /*border: 1px dashed #144154;
+        border-radius: 3px;*/
+  border: 1px dashed #144154;
+  border-radius: 3px;
 }
 /* styles for header block */
 .header {
@@ -321,7 +391,7 @@ ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem {
 }
 /* styles for chapter block and element */
 .chapter {
-  padding: 5px 0 10px 7px;
+  padding: 5px 7px 10px 7px;
   margin: 0 0 15px 0;
   /*--- header styles---*/
   /*--- header styles---*/
@@ -339,7 +409,7 @@ ul.menu li.menu__item:last-child .menu__submenu li.menu__subitem {
   font-size: 15px;
   padding: 5px 0;
 }
-.chapter__header-h3_underline {
+.chapter__header-h3_u {
   text-decoration: underline;
   padding: 5px 0 7px 0;
 }
@@ -407,6 +477,9 @@ input:enabled .chapter__input-btn_hover:hover {
 .resultat_margin {
   margin: 0 0 5px 0;
 }
+.custom-fontsize-14 {
+  font-size: 14px;
+}
 /* styles for decoration code-text */
 .code {
   font-family: monospace, sans-serif;
@@ -414,11 +487,14 @@ input:enabled .chapter__input-btn_hover:hover {
 .code_color {
   color: #157733;
 }
+.code_color-red {
+  color: #f00;
+}
 .code_color-blue {
   color: #00f;
 }
 .code_color-console {
-  color: #f25a22;
+  color: #de476b;
 }
 .code_color-comments {
   color: #708090;
@@ -446,6 +522,12 @@ input:enabled .chapter__input-btn_hover:hover {
 .code_indents-pl-11px {
   padding: 0 0 0 11px;
 }
+.code_indents-mb3 {
+  margin: 0 0 3px 0;
+}
+.code_indents-mb5 {
+  margin: 0 0 5px 0;
+}
 .code_indents-ml5 {
   margin: 0 0 0 5px;
 }
@@ -464,8 +546,8 @@ input:enabled .chapter__input-btn_hover:hover {
 .code_indents-mr5 {
   margin: 0 5px 0 0;
 }
-.code_redindents-console,
-.code_redindents-code {
+.code_redline-console,
+.code_redline-code {
   text-indent: 16px;
 }
 /* styles of content block and element */
